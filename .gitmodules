@@ -1,0 +1,7 @@
+[submodule "hugoladret/public"]
+	path = hugoladret/public
+	url = https://github.com/hugoladret/hugoladret.github.io.git
+	branch = main
+[submodule "hugoladret/themes/risotto"]
+	path = hugoladret/themes/risotto
+	url = https://github.com/joeroe/risotto.git

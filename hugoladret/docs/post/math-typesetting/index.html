@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head><title>Categories &ndash; Hugo Ladret&#39;s scientific ramblings - UNDER CONSTRUCTION</title>
+    <head><title>Math Typesetting &ndash; Hugo Ladret&#39;s scientific ramblings - UNDER CONSTRUCTION</title>
 <meta name="description" content="PhD Student, computational neuroscience &#43; vision 
 
 @ [Marseille](https://www.int.univ-amu.fr/recherche/equipes/neopto-2) &#43; [Montreal](https://www.opto.umontreal.ca/neurosciences/en/index.html)">
@@ -32,7 +32,7 @@
     
     <li class="main-nav__item"><a class="nav-main-item" href="http://hugoladret.github.io/about/" title="">About</a></li>
     
-    <li class="main-nav__item"><a class="nav-main-item" href="http://hugoladret.github.io/post/" title="Posts">Posts</a></li>
+    <li class="main-nav__item"><a class="nav-main-item active" href="http://hugoladret.github.io/post/" title="Posts">Posts</a></li>
     
     </ul>
 </nav>
@@ -40,20 +40,45 @@
 </header>
 
             <section class="page__body">
-    <h1 id="categories">Categories</h1>
+    <header class="content__header">
+        <h1>Math Typesetting</h1>
+    </header>
+    <div class="content__body">
+        <p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
+<p>In this example we will be using <a href="https://katex.org/">KaTeX</a></p>
+<ul>
+<li>Create a partial under <code>/layouts/partials/math.html</code></li>
+<li>Within this partial reference the <a href="https://katex.org/docs/autorender.html">Auto-render Extension</a> or host these scripts locally.</li>
+<li>Include the partial in your templates like so:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">{{</span> <span style="color:#66d9ef">if</span> or .Params.math .Site.Params.math <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;math.html&#34;</span> . <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
+</span></span></code></pre></div><ul>
+<li>To enable KaTex globally set the parameter <code>math</code> to <code>true</code> in a project&rsquo;s configuration</li>
+<li>To enable KaTex on a per page basis include the parameter <code>math: true</code> in content files</li>
+</ul>
+<p><strong>Note:</strong> Use the online reference of <a href="https://katex.org/docs/supported.html">Supported TeX Functions</a></p>
 
-    
 
-    <ul>
-    
-        <li><a href="http://hugoladret.github.io/categories/syntax/">syntax</a></li>
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 
-    
-        <li><a href="http://hugoladret.github.io/categories/themes/">themes</a></li>
 
-    
-    </ul>
+<h3 id="examples">Examples</h3>
 
+<p>
+Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
+</p>
+
+<p>Block math:
+$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$</p>
+    </div>
+    <footer class="content__footer"></footer>
 
             </section>
 
@@ -82,6 +107,14 @@
 </div>
                 <hr>
                 <div class="aside__content">
+    <p>A brief guide to setup KaTeX</p>
+    
+        <p>
+            By Hugo Authors, 
+            2019-03-08
+        </p>
+    
+
                 </div>
             </section>
 

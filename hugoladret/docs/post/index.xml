@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo Ladret&#39;s scientific ramblings - UNDER CONSTRUCTION</title>
-    <link>http://hugoladret.github.io/</link>
-    <description>Recent content on Hugo Ladret&#39;s scientific ramblings - UNDER CONSTRUCTION</description>
+    <title>Posts on Hugo Ladret&#39;s scientific ramblings - UNDER CONSTRUCTION</title>
+    <link>http://hugoladret.github.io/post/</link>
+    <description>Recent content in Posts on Hugo Ladret&#39;s scientific ramblings - UNDER CONSTRUCTION</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2023 [Hugo Ladret](http://hugoladret.github.io)</copyright>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://hugoladret.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>http://hugoladret.github.io/archives/</link>
-      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://hugoladret.github.io/archives/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://hugoladret.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown Syntax Guide</title>
       <link>http://hugoladret.github.io/post/markdown-syntax/</link>
@@ -60,17 +51,6 @@
       
       <guid>http://hugoladret.github.io/post/emoji-support/</guid>
       <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>http://hugoladret.github.io/about/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://hugoladret.github.io/about/</guid>
-      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
-Hugo makes use of a variety of open source projects including:
-https://github.com/yuin/goldmark https://github.</description>
     </item>
     
   </channel>

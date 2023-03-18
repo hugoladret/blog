@@ -3,7 +3,7 @@ theme = "risotto"
 title = "Hugo Ladret's scientific ramblings - UNDER CONSTRUCTION"
 author = 'Hugo Ladret'
 copyright = "© 2023 [Hugo Ladret](http://hugoladret.github.io)"
-publishDir = "docs"
+publishDir = "public"
 paginate = 3
 languageCode = 'en-us'
 DefaultContentLanguage = "en"
@@ -25,7 +25,7 @@ palette = "base16-dark"
 [params.about]
 title = "Hugo Ladret"
 description = """PhD Student, computational neuroscience + vision \n
-@ [Marseille](https://www.int.univ-amu.fr/) + [Montreal](https://www.opto.umontreal.ca/neurosciences/en/index.html)"""
+@ [Marseille](https://www.int.univ-amu.fr/recherche/equipes/neopto-2) + [Montreal](https://www.opto.umontreal.ca/neurosciences/en/index.html)"""
 logo = "images/brain.svg"
 
 # Sidebar: social links

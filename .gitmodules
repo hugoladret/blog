@@ -5,7 +5,3 @@
 [submodule "hugoladret/themes/risotto"]
 	path = hugoladret/themes/risotto
 	url = https://github.com/joeroe/risotto.git
-[submodule "hugoladret/hugoladret.github.io"]
-	path = hugoladret/hugoladret.github.io
-	url = https://github.com/hugoladret/hugoladret.github.io.git
-	branch = main

@@ -1,4 +1,4 @@
-baseURL = 'http://hugoladret.github.io'
+baseURL = 'http://hugoladret.github.io/'
 theme = "risotto"
 title = "Hugo Ladret's scientific ramblings - UNDER CONSTRUCTION>"
 author = 'Hugo Ladret'

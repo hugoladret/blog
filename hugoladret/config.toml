@@ -1,6 +1,6 @@
-baseurl = 'http://hugoladret.github.io/'
+baseurl = 'https://hugoladret.github.io/'
 theme = "risotto"
-title = "Hugo Ladret's scientific ramblings - UNDER CONSTRUCTION>"
+title = "Hugo Ladret's scientific ramblings > UNDER CONSTRUCTION <"
 author = 'Hugo Ladret'
 copyright = "© 2023 [Hugo Ladret](http://hugoladret.github.io)"
 publishDir = "public"
@@ -25,7 +25,9 @@ palette = "base16-dark"
 [params.about]
 title = "Hugo Ladret"
 description = """PhD Student, computational neuroscience + vision \n
-@ [Marseille](https://www.int.univ-amu.fr/recherche/equipes/neopto-2) + [Montreal](https://www.opto.umontreal.ca/neurosciences/en/index.html)"""
+<i class="fa-solid fa-map-location-dot"></i> [Marseille](https://www.int.univ-amu.fr/recherche/equipes/neopto-2)
++
+[Montreal](https://www.opto.umontreal.ca/neurosciences/en/index.html)"""
 logo = "images/brain.svg"
 
 # Sidebar: social links
@@ -43,8 +45,17 @@ icon = "ai ai-orcid"
 title = "ORCID"
 url = "https://orcid.org/0000-0001-7999-3751"
 
-[menu]
+[[params.socialLinks]]
+icon = "ai ai-google-scholar"
+title = "Google Scholar"
+url = "https://scholar.google.com/citations?user=n6dvyjwAAAAJ&hl=en&oi=ao"
 
+[[params.socialLinks]]
+icon = "fa-brands fa-twitter"
+title = "Twitter "
+url = "https://twitter.com/hugoladret/"
+
+[menu]
   [[menu.main]]
     identifier = "about"
     name = "About"

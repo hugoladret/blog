@@ -1,25 +1,24 @@
 +++
-title = "About"
-description = "Hugo, the world's fastest framework for building websites"
-date = "2019-02-28"
-aliases = ["about-us", "about-hugo", "contact"]
-author = "Hugo Authors"
+title = "Hi !"
+description = """ 'A major challenge of any scientific endeavor is not only to provide good answers to the questions we ask about the world, but to find good questions to ask in the first place' > Paul Cisek, 2019
+"""
+date = ""
+aliases = ["contact"]
+author = ""
 +++
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+Thanks for stopping by my corner of the Internet.
 
-Hugo makes use of a variety of open source projects including:
+## Who am I ?
+I'm Hugo, a PhD student researching [predictive coding](https://royalsocietypublishing.org/doi/10.1098/rstb.2005.1622?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed), an influential brain theory that promises to account for the many seemingly disparate results neuroscientists have gathered over decades of experiments.
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+I'm a neurobiologist by training, but I believe no good science can be done without a theory-driven approach. My experimental work is mostly about vision, while my theoreotical interests are about anything neural network-related. You can read the fine details on my [résumé](https://hugoladret.github.io/resume/resume.pdf).
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+I also play piano for a hobby, and, like the stereotypical Frenchman I am, can find you a decent bottle of wine at any conference.
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+## What's all this about ?
+This website is a way to share actually serious thoughts in an informal delivery style, much like in the section above. I feel this is necessary, as most people only get to see the tip of the iceberg of a scientist's train of thoughts through articles that have been transmuted by editing and peer reviewing.
 
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+Therefore, this website constitutes the non-tip of the iceberg (formally dubbed the [bummock](https://www.canada.ca/en/environment-climate-change/services/ice-forecasts-observations/latest-conditions/glossary.html#wsglossaryB)) of my brain.
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+Additionally, this website serves as a convenient platform to host open-access PDFs of my search, and as a linking hub for diverse social medias links (which you will find on the right side of the site).

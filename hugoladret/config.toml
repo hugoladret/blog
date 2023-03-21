@@ -24,7 +24,7 @@ palette = "base16-dark"
 # Sidebar: about/bio
 [params.about]
 title = "Hugo Ladret"
-description = """PhD Student, computational neuroscience + vision \n
+description = """PhD Student \n computational neuroscience + vision \n
 <i class="fa-solid fa-map-location-dot"></i> [Marseille](https://www.int.univ-amu.fr/recherche/equipes/neopto-2)
 +
 [Montreal](https://www.opto.umontreal.ca/neurosciences/en/index.html)"""
@@ -57,8 +57,8 @@ url = "https://twitter.com/hugoladret/"
 
 [menu]
   [[menu.main]]
-    identifier = "about"
-    name = "About"
+    identifier = "About"
+    name = "./About"
     url = "/about/"
     weight = 10
 

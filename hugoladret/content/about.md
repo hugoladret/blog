@@ -21,4 +21,4 @@ This website is a way to share actually serious thoughts in an informal delivery
 
 Therefore, this website constitutes the non-tip of the iceberg (formally dubbed the [bummock](https://www.canada.ca/en/environment-climate-change/services/ice-forecasts-observations/latest-conditions/glossary.html#wsglossaryB)) of my brain.
 
-Additionally, this website serves as a convenient platform to host open-access PDFs of my search, and as a linking hub for diverse social medias links (which you will find on the right side of the site).
+Additionally, this website serves as a convenient platform to host open-access PDFs of my research, and as a linking hub for diverse social medias links.

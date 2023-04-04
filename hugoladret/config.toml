@@ -1,6 +1,6 @@
 baseurl = 'https://hugoladret.github.io/'
 theme = "risotto"
-title = "Hugo Ladret's scientific ramblings > UNDER CONSTRUCTION <"
+title = "Hugo Ladret's scientific ramblings"
 author = 'Hugo Ladret'
 copyright = "© 2023 [Hugo Ladret](http://hugoladret.github.io)"
 publishDir = "public"

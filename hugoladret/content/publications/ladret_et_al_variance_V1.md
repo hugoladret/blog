@@ -6,7 +6,7 @@ journal = "Nature Communications Biology"
 description = "Ladret et al. 2023"
 +++
 
-[<i class="fa-solid fa-file-pdf"></i>](https://hugoladret.github.io/publications/ladret_et_al_variance_V1.pdf) - [<i class="fa-solid fa-quote-left"></i>](https://scholar.googleusercontent.com/scholar.bib?q=info:Ct1RvT8fLUYJ:scholar.google.com/&output=citation&scisdr=CgUKAuoEEOK9kuLT8BM:AAGBfm0AAAAAZBnW6BPlookfQHl0B6kWjvJ5eZ4wCVTg&scisig=AAGBfm0AAAAAZBnW6IHotqOgsEUd--ShUD7ZISMhaOsH&scisf=4&ct=citation&cd=-1&hl=fr) - [<i class="ai ai-biorxiv"></i>](https://www.biorxiv.org/content/10.1101/2021.03.30.437692v5)
+[<i class="fa-solid fa-newspaper"></i>](https://www.nature.com/articles/s42003-023-05042-3) - [<i class="fa-solid fa-file-pdf"></i>](https://hugoladret.github.io/publications/ladret_et_al_variance_V1.pdf) - [<i class="fa-solid fa-quote-left"></i>](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=n6dvyjwAAAAJ&citation_for_view=n6dvyjwAAAAJ:Tyk-4Ss8FVUC) - [<i class="fa-solid fa-globe"></i>](https://laurentperrinet.github.io/publication/ladret-23/) - [<i class="ai ai-biorxiv"></i>](https://www.biorxiv.org/content/10.1101/2021.03.30.437692v5)
 
 <!--more-->
 <!--more-->
@@ -15,7 +15,7 @@ Connections between neighbouring cortical neurons endows neural networks with th
 
 
 # Context
-Imagine yourself hiking through a forest. The wind rustles through the leaves, when suddenly a strange noise catches your attention. Did it come from a squirrel scurrying along the path in plain sight ? Or perhaps a bird nestling behind the bushes, hidden behind foilage ? In the latter case, do you take the extra time to see the bird, or infer that the rustling is rather that of a lion, and run away as fast as possible ? 
+Imagine yourself hiking through a forest. The wind rustles through the leaves, when suddenly a strange noise catches your attention. Did it come from a squirrel scurrying along the path in plain sight ? Or perhaps a bird nestling behind the bushes, hidden behind foilage ? In the latter case, do you take the extra time to see the bird, or infer that the rustling is rather that of a lion, and run away as fast as possible ?
 
 This simple and rather silly scenario showcases a daily problem that we as human are facing: how can our brain make sense of the world, when our senses are bombarded with unreliable information ?
 
@@ -64,7 +64,7 @@ These specific neurons were found in different layers of the cortex, which conne
 ![Cortical Anatomy](https://hugoladret.github.io/publications/imgs/ladret_et_al_variance_V1_9.png)
 
 
-# Results : model 
+# Results : model
 We simulated this differential anatomical basis phenomenon using a computer model and found that by tweaking the amount of "recurrence" (the way neurons connect and influence each other), we could mimic the behavior of both resilient and vulnerable neurons.
 
 ![Article Figure 7](https://hugoladret.github.io/publications/imgs/ladret_et_al_variance_V1_10.png)
@@ -76,7 +76,7 @@ Overall, recurrence can explain how different neurons encode (or not) the varian
 ![Article Figure 8](https://hugoladret.github.io/publications/imgs/ladret_et_al_variance_V1_11.png)
 
 
-# Relevance 
+# Relevance
 
 This is a crucial step in understanding how our cortex manages the "visual puzzles" we encounter every day, allowing the brain to perform complex calculations on probabilistic distributions - a model that's gaining more popularity in neuroscience [5].
 

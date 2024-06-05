@@ -10,43 +10,51 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the blog repository
-      - name: Checkout blog repository
+      - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          repository: hugoladret/blog
-          token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
-      # Set up Hugo
       - name: Set up Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
 
-      # Build the Hugo site
       - name: Build site
         run: hugo -s hugoladret
 
-      # Checkout the hugoladret.github.io repository
-      - name: Checkout hugoladret.github.io repository
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./hugoladret/public
+
+      - name: Checkout gh-pages branch of blog repository
+        uses: actions/checkout@v2
+        with:
+          repository: hugoladret/blog
+          ref: gh-pages
+          path: blog
+
+      - name: Copy gh-pages content to a new directory
+        run: cp -r blog/* ./
+
+      - name: Checkout main branch of hugoladret.github.io repository
         uses: actions/checkout@v2
         with:
           repository: hugoladret/hugoladret.github.io
-          path: hugoladret-gh-pages
-          ref: main  # Assuming 'main' is the branch you are deploying to
-          token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          ref: main
+          path: github-pages
 
-      # Copy the built site to the hugoladret.github.io repository
-      - name: Copy site files
+      - name: Synchronize content
         run: |
-          rsync -av --delete hugoladret/public/ hugoladret-gh-pages/
+          rsync -a --delete blog/ github-pages/
 
-      # Commit and push the changes to the hugoladret.github.io repository
-      - name: Deploy to GitHub Pages
+      - name: Commit and push changes
         run: |
-          cd hugoladret-gh-pages
-          git config user.name 'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          cd github-pages
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Deploy site from blog repository"
-          git push origin main  # Assuming 'main' is the branch you are deploying to
+          git commit -m "Deploy site updates"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}

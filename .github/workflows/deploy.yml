@@ -3,7 +3,7 @@ name: Deploy Hugo site to GitHub Pages
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   build:
@@ -23,8 +23,15 @@ jobs:
       - name: Build site
         run: hugo -s hugoladret -d docs
 
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-            commit_message: Deploy website
-            push_options: '--force'
-            branch: main
+      - name: Configure Git
+        run: |
+          git config --global user.email "hugo.ladret@gmail.com"
+          git config --global user.name "Hugo Ladret"
+
+      - name: Commit and Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git add .
+          git commit -m "Deploy website" || exit 0
+          git push origin main --force

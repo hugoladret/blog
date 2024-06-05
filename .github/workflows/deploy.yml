@@ -21,7 +21,7 @@ jobs:
           hugo-version: 'latest'
 
       - name: Build site
-        run: hugo -s hugoladret -d docs
+        run: hugo -s hugoladret -d public
 
       - name: Configure Git
         env:

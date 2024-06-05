@@ -1,4 +1,4 @@
-name: Deploy Hugo site to GitHub Pages
+name: Build and Deploy Hugo site
 
 on:
   push:
@@ -22,7 +22,12 @@ jobs:
         run: hugo -s hugoladret
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./hugoladret/public
+        run: |
+          cd hugoladret/public
+          git init
+          git remote add origin https://github.com/hugoladret/blog.git
+          git add .
+          git commit -m "Deploy site"
+          git push -f origin main:main
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}

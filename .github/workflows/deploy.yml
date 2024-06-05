@@ -18,11 +18,8 @@ jobs:
         with:
           hugo-version: 'latest'
 
-      - name: Navigate to Hugo site directory
-        run: cd hugoladret
-
       - name: Build site
-        run: hugo
+        run: hugo -s hugoladret
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

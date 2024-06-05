@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          persist-credentials: false # Use the provided token from the secrets.
+          persist-credentials: false
 
       - name: Set up Hugo
         uses: peaceiris/actions-hugo@v2
@@ -30,8 +30,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git add *
+          git add .
           git commit -m "Deploy updated site"
           git push --force
         env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

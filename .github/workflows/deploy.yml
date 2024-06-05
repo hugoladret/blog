@@ -3,7 +3,7 @@ name: Deploy Hugo site to GitHub Pages
 on:
   push:
     branches:
-      - main 
+      - main  # Ensure this matches your default branch
 
 jobs:
   build:
@@ -18,6 +18,9 @@ jobs:
         with:
           hugo-version: 'latest'
 
+      - name: Navigate to Hugo site directory
+        run: cd hugoladret
+
       - name: Build site
         run: hugo
 
@@ -25,4 +28,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./hugoladret/public

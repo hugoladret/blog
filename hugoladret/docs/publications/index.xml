@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>./papers/ on Hugo Ladret&#39;s scientific ramblings</title>
+    <link>https://hugoladret.github.io/publications/</link>
+    <description>Recent content in ./papers/ on Hugo Ladret&#39;s scientific ramblings</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© 2023 [Hugo Ladret](http://hugoladret.github.io)</copyright>
+    <lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://hugoladret.github.io/publications/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cortical recurrence supports resilience to sensory variance in the primary visual cortex</title>
+      <link>https://hugoladret.github.io/publications/ladret_et_al_variance_v1/</link>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://hugoladret.github.io/publications/ladret_et_al_variance_v1/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.nature.com/articles/s42003-023-05042-3&#34;&gt;&lt;i class=&#34;fa-solid fa-newspaper&#34;&gt;&lt;/i&gt;&lt;/a&gt; - &lt;a href=&#34;https://hugoladret.github.io/publications/ladret_et_al_variance_V1.pdf&#34;&gt;&lt;i class=&#34;fa-solid fa-file-pdf&#34;&gt;&lt;/i&gt;&lt;/a&gt; - &lt;a href=&#34;https://scholar.google.com/citations?view_op=view_citation&amp;amp;hl=en&amp;amp;user=n6dvyjwAAAAJ&amp;amp;citation_for_view=n6dvyjwAAAAJ:Tyk-4Ss8FVUC&#34;&gt;&lt;i class=&#34;fa-solid fa-quote-left&#34;&gt;&lt;/i&gt;&lt;/a&gt; - &lt;a href=&#34;https://laurentperrinet.github.io/publication/ladret-23/&#34;&gt;&lt;i class=&#34;fa-solid fa-globe&#34;&gt;&lt;/i&gt;&lt;/a&gt; - &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2021.03.30.437692v5&#34;&gt;&lt;i class=&#34;ai ai-biorxiv&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Corticothalamic Projections Gate Alpha Rhythms in the Pulvinar</title>
+      <link>https://hugoladret.github.io/publications/cortes_et_al_pulvinar/</link>
+      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://hugoladret.github.io/publications/cortes_et_al_pulvinar/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.frontiersin.org/articles/10.3389/fncel.2021.787170/full&#34;&gt;&lt;i class=&#34;fa-solid fa-book&#34;&gt;&lt;/i&gt;&lt;/a&gt; - &lt;a href=&#34;https://hugoladret.github.io/publications/cortes_et_al_pulvinar.pdf&#34;&gt;&lt;i class=&#34;fa-solid fa-file-pdf&#34;&gt;&lt;/i&gt;&lt;/a&gt; - &lt;a href=&#34;https://scholar.googleusercontent.com/scholar.bib?q=info:2rWuhDabRecJ:scholar.google.com/&amp;amp;output=citation&amp;amp;scisdr=CgUKAuoEEOK9kuLcTUA:AAGBfm0AAAAAZBnZVUBkRbCvg2xAo80_7651biNTTXmq&amp;amp;scisig=AAGBfm0AAAAAZBnZVWxcvy0mz_lUiJM_cNQ6rhQTTgEy&amp;amp;scisf=4&amp;amp;ct=citation&amp;amp;cd=-1&amp;amp;hl=fr&#34;&gt;&lt;i class=&#34;fa-solid fa-quote-left&#34;&gt;&lt;/i&gt;&lt;/a&gt; - &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/2021.09.10.459796v1&#34;&gt;&lt;i class=&#34;ai ai-biorxiv&#34;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

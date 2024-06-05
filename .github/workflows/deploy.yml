@@ -34,4 +34,4 @@ jobs:
           git commit -m "Deploy updated site"
           git push --force
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}

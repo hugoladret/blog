@@ -25,8 +25,9 @@ jobs:
 
       - name: Configure Git user
         
-      - uses: actions/checkout@v3
+      
       - name: Commit and push changes
+        uses: actions/checkout@v3
         run: |
           git config --global user.name 'Hugo Ladret'
           git config --global user.email 'hugoladret@users.noreply.github.com'

@@ -43,6 +43,7 @@ jobs:
           repository: hugoladret/hugoladret.github.io
           ref: main
           path: github-pages
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
       - name: Synchronize content
         run: |
@@ -57,4 +58,4 @@ jobs:
           git commit -m "Deploy site updates"
           git push origin main
         env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}

@@ -35,7 +35,7 @@ jobs:
 
       - name: Commit and Push changes to submodule, and this time it definitely works
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
           cd hugoladret/public
           git add *

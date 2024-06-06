@@ -1,9 +1,9 @@
 +++
-author = "Nelson Cortes, Reza Abbas Farishta, Hugo Ladret, Christian Casanova"
-title = "[2021] [model] -- Corticothalamic Projections Gate Alpha Rhythms in the Pulvinar"
-date = "2021-12-06"
-journal = "published in Frontiers in Cellular Neuroscience"
-description = "Cortes et al. 2021"
+author = "Nelson Cortes, Hugo Ladret, Reza Abbas Farishta, Christian Casanova"
+title = "[2023] [review] -- The pulvinar as a hub of visual processing and cortical integration"
+date = "2023-12-23"
+journal = "published in Trends in Neurosciences"
+description = "Cortes et al. 2023"
 tags = [
 
 ]
@@ -44,3 +44,4 @@ Canonical view: visual processing in the cortex as hierarchical communication. O
 [2] Abbas Farishta, R., Boire, D., & Casanova, C. (2020). Hierarchical organization of corticothalamic projections to the pulvinar. Cerebral Cortex Communications, 1(1).
 
 # On a personal note
+Second pulvinar paper with Nelson, published almost exactly two years after the first one.

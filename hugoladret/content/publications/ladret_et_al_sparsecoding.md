@@ -1,9 +1,9 @@
 +++
-author = "Hugo Ladret, Nelson Cortes, Lamyae Ikan, Frederic Chavane, Christian Casanova, Laurent U Perrinet"
-title = "[2023] [model] [data] -- Cortical recurrence supports resilience to sensory variance in the primary visual cortex"
-date = "2023-06-01"
-journal = "Nature Communications Biology"
-description = "Ladret et al. 2023"
+author = "Hugo Ladret, Christian Casanova, Laurent Perrinet"
+title = "[2024] [model] -- Kernel Heterogeneity Improves Sparseness of Natural Images Representations"
+date = "2024-01-01"
+journal = "ArXiv preprint"
+description = "Ladret et al. 2024"
 tags = [
 
 ]
@@ -86,5 +86,4 @@ Crucial step in understanding how cortex handles "visual puzzles." Allows brain 
 [5] Spratling, M. W. (2016). A neural implementation of Bayesian inference based on predictive coding. Connection Science, 28(4), 346-383.
 
 # On a personal note
-First first-authored peer-reviewed paper !! \
-Very long adventure — experiments started in 2020, pre-COVID-19. Wrote 4 versions of paper from scratch. Grateful to reviewers, editors at Nat. Com. Bio. for publishing opportunity.
+Submitted this one on ArXiv right while shopping for christmas groceries !

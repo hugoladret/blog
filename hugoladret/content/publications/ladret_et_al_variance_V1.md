@@ -1,5 +1,5 @@
 +++
-author = "Hugo Ladret, Nelson Cortes, Lamyae Ikan, Frederic Chavane, Christian Casanova, Laurent U Perrinet"
+author = "Hugo Ladret, Nelson Cortes, Lamyae Ikan, Frederic Chavane, Christian Casanova, Laurent Perrinet"
 title = "[2023] [model] [data] -- Cortical recurrence supports resilience to sensory variance in the primary visual cortex"
 date = "2023-06-01"
 journal = "Nature Communications Biology"

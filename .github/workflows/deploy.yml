@@ -38,6 +38,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN  }}
         run: |
           cd hugoladret/public
+          git init
+          git remote add origin https://hugoladret:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/hugoladret/hugoladret.github.io.git
           git add *
           git commit --allow-empty -m "Deploy website from githubbot"
           git push origin HEAD:master -f

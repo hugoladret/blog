@@ -44,4 +44,3 @@ Canonical view: visual processing in the cortex as hierarchical communication. O
 [2] Abbas Farishta, R., Boire, D., & Casanova, C. (2020). Hierarchical organization of corticothalamic projections to the pulvinar. Cerebral Cortex Communications, 1(1).
 
 # On a personal note
-First peer-reviewed paper. Exciting milestone!\ 

@@ -11,10 +11,8 @@ Thank you for visiting this corner of the Internet !
 
 ## The website
 Goal here is to efficiently share serious thoughts, in informal tone. \
-Writing in this concise style helps :-)
-
-Also an ideal format to share short tutorials on things that perplexed me. 
-
+Writing in this concise style helps :-) \
+Also an ideal format to share short tutorials on things that perplexed me. \
 Also useful to dump random assortment of thoughts. 
 
 Most importantly, convenient platform to host open-access PDFs.

@@ -1,6 +1,6 @@
 +++
 author = "Hugo Ladret"
-title = "Extracting data from Blackrock files in Python #ephys #code"
+title = "[ephys] [code] Extracting data from Blackrock files in Python"
 date = "2023-04-17"
 description = """ 'People are so into digital recording now they forgot how easy analog recording can be.' > Dave Grohl
 """

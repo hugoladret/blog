@@ -25,8 +25,8 @@ palette = "base16-dark"
 [params.about]
 title = "Hugo Ladret"
 description = """
-Postdoctoral researcher \n
-Neuroscience \n
+Postdoctoral researcher \
+Neuroscience \
 <i class="fa-solid fa-map-location-dot"></i> [Basel](https://www.apredictiveprocessinglab.org/)"""
 logo = "images/brain.svg"
 

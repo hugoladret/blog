@@ -1,6 +1,6 @@
 +++
 author = "Hugo Ladret"
-title = "SUA vs MUA #ephys #bibliography"
+title = "[ephys] [biblio] SUA vs MUA"
 date = "2023-04-14"
 description = """ 'We should all do what, in the long run, gives us joy, even if it is only picking grapes or sorting the spikes.' > E. B. White, 1989 (approximative quote)
 """

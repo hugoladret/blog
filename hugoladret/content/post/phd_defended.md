@@ -1,8 +1,8 @@
 +++
 author = "Hugo Ladret"
 title = "[misc] PhD defended !"
-description = """ 'Well, I'm all for leaving and that being done. I've put in a request to take up my turn.' > Jethro Tull, A Passion Play
 date = "2024-02-10"
+description = """ 'Well, I'm all for leaving and that being done. I've put in a request to take up my turn.' > Jethro Tull, A Passion Play
 """
 tags = [
 
@@ -20,7 +20,7 @@ Overall, challenging, fulfilling experience. Tackled simple problem: implementat
 With [Christian Casanova](https://opto.umontreal.ca/recherche/unites/laboratoire-neurosciences-vision/), conducted brain recordings in various setups. Goal: understand how neurons encode environmental uncertainty.
 With [Laurent Perrinet](https://laurentperrinet.github.io/), developed computer models of these neurons. Explained existence, necessity of these neurons.
 
-Accomplishments, non-exhaustive list:
+Things I did, non-exhaustive list:
 * Showed new type of response to uncertainty in cortex: https://hugoladret.github.io/publications/ladret_et_al_variance_v1/
 * Developed deep learning models: https://hugoladret.github.io/publications/ladret_et_al_sparsecoding/
 * Framed this under Bayesian principles: https://hugoladret.github.io/publications/cortes_et_al_review/

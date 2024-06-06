@@ -1,6 +1,6 @@
 +++
 author = "Hugo Ladret"
-title = "Getting single neurons with Utah arrays in V1 #ephys #code"
+title = "[ephys] [code] Getting single neurons with Utah arrays in V1"
 date = "2023-04-16"
 description = """ 'We should all do what, in the long run, gives us joy, even if it is only picking grapes or sorting the spikes.' > E. B. White, 1989 (approximative quote)
 """
@@ -11,14 +11,12 @@ tags = [
 
 <!--more-->
 # The problem
-Utah arrays implanted in the primary visual cortex are facing the double challenge of recording a dense cortical structure, with an impedance more suited to multi-units recording. This makes it hard to obtain single unit activity (SUA), especially when the array has been implanted for quite some time.
-Even with the advent of high throughput template matching spike sorter (i.e. [Kilosort](https://github.com/MouseLand/Kilosort)), getting some SUA from large arrays is not trivially simple.
-I've been playing around with Kilosort 3 to get some nice SUA, and while there is no such thing as a magic combination of parameters, here are a few useful tips.
+Utah arrays in primary visual cortex, dual challenges. Dense cortical structure, impedance suited to multi-units recording. Hard to obtain single unit activity (SUA), especially over time. Even with high throughput template matching spike sorters like [Kilosort](https://github.com/MouseLand/Kilosort), not trivial to get SUA from large arrays. Experimented with Kilosort 3, seeking better SUA. No magic parameters, but useful tips follow.
 
 # Solution part one
-First things first, install Kilosort 3 following the [instructions](https://github.com/MouseLand/Kilosort#installation).
+First, install Kilosort 3 following the [instructions](https://github.com/MouseLand/Kilosort#installation).
 
-1) Generate a channel map that linearizes the Utah array, as we don't really care about geometry here and Utah contact sites a very distant from one another :
+1) Generate a channel map to linearize Utah array. Geometry not critical; contact sites distant:
 ```matlab
 Nchannels = 128;
 connected = true(Nchannels, 1);
@@ -31,17 +29,16 @@ kcoords   = [1:Nchannels]'; % grouping of channels (i.e. tetrode groups)
 fs = 30000; % sampling frequency
 save('./linear_utah_array.mat', ...
     'chanMap','connected', 'xcoords', 'ycoords', 'kcoords', 'chanMap0ind', 'fs')
-```
 
-2) Turn off drift correction in "main_kilosort3.m", which is useless in the given geometry :
+2) Turn off drift correction in "main_kilosort3.m" - useless in the given geometry :
 ```matlab
 ops.nblocks    = 0; % blocks for registration. 0 turns it off, 1 does rigid registration. Replaces "datashift" optio
 ```
 
-These two simple steps should already vastly improve Kilosort 3's compatibility with Utah array recordings.
+These two steps should already improve Kilosort 3's ability to get SUA on Utah arrays.
 
 # Soltuion part two
-It's also a decent idea to have a look at the role of the parameters when looking for SUAs. Kilosort's code is easy to integrate into a parameter scan. Rewrite main_kilosort3.m into :
+Examine parameter roles when searching for SUAs. Kilosort's code allows parameter scanning. Rewrite main_kilosort3.m:
 ```matlab
 function main_ks3_scan(ops)
     % Add paths
@@ -94,7 +91,7 @@ function main_ks3_scan(ops)
 end
 ```
 
-Similarly, rewrite the StandardConfig_MOVEME file into a function, then write a new matlab script :
+Similarly, rewrite StandardConfig_MOVEME file into a function, then write a new MATLAB script:
 ```matlab
 % Load the default parameters from StandardConfig_MOVEME.m
 ops = StandardConfig_MOVEME();
@@ -128,13 +125,12 @@ for lam_idx = 1:length(lam_vals)
 end
 ```
 
-This yields a number of good clusters w.r.t. spike-sorting parameters. However, more is not always better, as instances where the number of clusters is maximum are often obtained through low stringency on the thresholds, and end up giving poorly clustered units with few spikes. Similarly, with a low lam parameter, low amplitude (artifactual ?) clusters tend to show up *a lot*.
-
+Yields several good clusters relative to spike-sorting parameters. However, more clusters not always better. Maximum clusters often result from low stringency thresholds, yielding poorly clustered units with few spikes. Low lam parameter leads to many low amplitude (artifactual?) clusters.
 ![Bad SUAS](https://hugoladret.github.io/post/imgs/SUA_KS3_1.png)
 
-By manually visualizing the clusters with [Phy](https://phy.readthedocs.io/en/latest/), I ended up settling with parameters lam = 10 ; ThPre = 10 ; Th = [12 6], which yields nicer single units :
+By manually visualizing the clusters with [Phy](https://phy.readthedocs.io/en/latest/), settled with parameters lam = 10 ; ThPre = 10 ; Th = [12 6], which yields nicer single units :
 
 ![Better SUAS](https://hugoladret.github.io/post/imgs/SUA_KS3_2.png)
 
-This is not a miracle solution, but it ends up offering similar performance to what Kilosort 2 used to output, whilst doing a better job at tracking the MUAs than KS2.
-If a miracle solution does show up, I'll make another post !
+Not a miracle solution, but offers similar performance to Kilosort 2, better at tracking MUAs than KS2. \
+If miracle solution shows up, will post updates!

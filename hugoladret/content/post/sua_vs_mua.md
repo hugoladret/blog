@@ -11,20 +11,22 @@ tags = [
 
 <!--more-->
 # The problem
-Extracellular electrophysiology can be about :
-* Recording Single Unit Activity (SUA), i.e. the potentials from one single neuron in the brain, with a small-ish electrode nearby.
-* Recording multiple of those simultaneously and in a mixed manner, i.e. a pool of potentials from multiple closeby cells, called Multi Unit Activity (MUA).
-* Scaling up even higher in space and time, recording the transient potential of many neurons, in the form of Local Field Potentials (LFP).
+Extracellular electrophysiology can involve:
+* Recording Single Unit Activity (SUA), capturing activity from a single neuron in the brain with a nearby electrode.
+* Recording multiple neurons simultaneously, resulting in a mixed signal from nearby cells, called Multi Unit Activity (MUA).
+* Scaling up further, recording transient potentials from many neurons, known as Local Field Potentials (LFP).
 
-What is recorded depends on many factors, amongst which the impedance of the electrode and the filtering frequencies are key. In terms of SUA vs MUA, it is mostly about impedance, or put more simply the size of a "listening sphere" around the tip of the electrode.
+What is recorded depends on various factors, with electrode impedance and filtering frequencies being crucial. For SUA vs MUA, it's primarily about impedance, essentially the size of the "listening sphere" around the electrode tip.
 
-I've been personally dealing entirely with SUA in my career so far, but they have recently used datasets [in which they are not necessarily accessible](https://hugoladret.github.io/post/sua_ks3/). Wishing to know more about how a mixed bag of SUA compares to a "pure" SUA, I started browsing the relevant literature. This post will be updated regularly to reflect new findings.
+I've worked exclusively with SUA before this post. Recently encountered datasets where SUA is not necessarily accessible. \ 
+Curious about how a mix of SUA compares to pure SUA - started exploring relevant literature. 
 
 # Solution(s)
-## [ 2023-04-14 ]
-It is not uncommon to mix SUA and MUA in publications, which reflects their shared origin and function. Recently, I've read two articles [here](https://www.nature.com/articles/s41593-018-0089-1) and [there](https://www.science.org/doi/10.1126/science.aao0284?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed) in which authors were mixing both signals in V1 electrophysiology.
+## [2023-04-14]
+Mixing SUA and MUA in publications is not uncommon - reflecting their shared origins and functions ? \
+Recently, read two articles [here](https://www.nature.com/articles/s41593-018-0089-1) and [there](https://www.science.org/doi/10.1126/science.aao0284?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed) which mixed both in V1.
 
-I found these paper through a [third one](https://pubmed.ncbi.nlm.nih.gov/36947884/) in which the authors went so far as to claim that :
+Discovered these papers through a [third one](https://pubmed.ncbi.nlm.nih.gov/36947884/) - authors claimed:
 > No spike sorting was performed, as previous studies similar to ours have reported no significant difference between single- and multi-unit results.
 
-which, when reading all three articles, seems quite true.
+Reading all three articles, claim appears quite accurate.

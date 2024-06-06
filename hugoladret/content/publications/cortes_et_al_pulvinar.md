@@ -1,6 +1,6 @@
 +++
 author = "Nelson Cortes, Reza Abbas Farishta, Hugo Ladret, Christian Casanova"
-title = "[2021] [model] [pulvinar] - Corticothalamic Projections Gate Alpha Rhythms in the Pulvinar"
+title = "[2021] [model] -- Corticothalamic Projections Gate Alpha Rhythms in the Pulvinar"
 date = "2021-12-06"
 journal = "published in Frontiers in Cellular Neuroscience"
 description = "Cortes et al. 2021"
@@ -13,7 +13,7 @@ description = "Cortes et al. 2021"
 Distinct synaptic connections cortex->pulvinar = distinct oscillatory patterns. Significant implications for visual processing in the cortex, especially for attention.
 
 # Context
-The pulvinar, thalamic nucleus, right next to the lateral geniculate nucleus (LGN). Size of the pulvinar correlates with neocortex expansion throughout mammalian evolution [1]. Hence, pulvinar being the largest nucleus of primates' thalamus. Unique extensive (and reciprocal) synaptic connections with all visual cortical areas.
+The pulvinar, thalamic nucleus, is right next to the lateral geniculate nucleus (LGN). Size of the pulvinar correlates with neocortex expansion throughout mammalian evolution [1]. Hence, pulvinar being the largest nucleus of primates' thalamus. Unique extensive (and reciprocal) synaptic connections with all visual cortical areas.
 
 ![Pulvinar connectivity](https://hugoladret.github.io/publications/imgs/cortes_et_al_pulvinar_1.png)
 

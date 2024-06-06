@@ -1,15 +1,6 @@
 +++
 author = "Hugo Ladret, Nelson Cortes, Lamyae Ikan, Frederic Chavane, Christian Casanova, Laurent U Perrinet"
-title = "[2023] [model] [data] [cortex] Cortical recurrence supports resilience to sensory variance in the primary visual cortex"
-date = "2023-06-01"
-journal = "Nature Communications Biology"
-description = "Ladret et al. 2023"
-+++
-
-[<i class="fa-solid fa-newspaper"></i>](https://www.nature.com/articles/s42003-023-05042-3) - [<i class="fa-solid fa-file-pdf"></i>](https://hugoladret.github.io/publications/ladret_et_al_variance_V1.pdf) - [<i class="fa-solid fa-quote-left"></i>](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=n6dvyjwAAAAJ&citation_for_view=n6dvyjwAAAAJ:Tyk-4Ss8FVUC) - [<i class="fa-solid fa-globe"></i>](https://laurentperrinet.github.io/publication/ladret-23/) - [<i class="ai ai-biorxiv"></i>](https://www.biorxiv.org/content/10.1101/2021.03.30.437692v5)
-+++
-author = ">Hugo Ladret<, Nelson Cortes, Lamyae Ikan, Frederic Chavane, Christian Casanova, Laurent U Perrinet"
-title = "[model] [experiments] [cortex] Cortical recurrence supports resilience to sensory variance in the primary visual cortex"
+title = "[2023] [model] [data] -- Cortical recurrence supports resilience to sensory variance in the primary visual cortex"
 date = "2023-06-01"
 journal = "Nature Communications Biology"
 description = "Ladret et al. 2023"
@@ -17,7 +8,6 @@ description = "Ladret et al. 2023"
 
 [<i class="fa-solid fa-newspaper"></i>](https://www.nature.com/articles/s42003-023-05042-3) - [<i class="fa-solid fa-file-pdf"></i>](https://hugoladret.github.io/publications/ladret_et_al_variance_V1.pdf) - [<i class="fa-solid fa-quote-left"></i>](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=n6dvyjwAAAAJ&citation_for_view=n6dvyjwAAAAJ:Tyk-4Ss8FVUC) - [<i class="fa-solid fa-globe"></i>](https://laurentperrinet.github.io/publication/ladret-23/) - [<i class="ai ai-biorxiv"></i>](https://www.biorxiv.org/content/10.1101/2021.03.30.437692v5)
 
-<!--more-->
 <!--more-->
 # TL;DR
 Connections between neighboring cortical neurons allow neural networks to compute variance of sensory input. \

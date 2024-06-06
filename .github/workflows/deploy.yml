@@ -33,7 +33,7 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-      - name: Commit and Push changes to submodule, and this time it definitely works
+      - name: Commit and Push changes to submodule, and this time it definitely works, for real
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN  }}
         run: |

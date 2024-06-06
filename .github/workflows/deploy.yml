@@ -35,7 +35,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cd blog/hugoladret/public
+          cd hugoladret/public
           git add *
           git commit --allow-empty -m "Deploy website from githubbot"
           git push origin HEAD:master -f

@@ -28,6 +28,12 @@ Things I did, non-exhaustive list:
 Tremendous fun ! Equally about science and personal journey.
 
 In 4.5 years, progressed from failing basic high school maths to writing hundreds of pages filled with equations for [manuscript](https://github.com/hugoladret/PhD_manuscript).\
-From stage fright in lab classes to performing neurosurgical procedures solo. Learned comfort in discomfort.
+From stage fright in lab classes to performing neurosurgical procedures solo. Learned comfort in discomfort - valuable lesson.
 
 Onward to new adventures in April!
+
+
+# Fun fact
+![defensepic]((https://hugoladret.github.io/post/imgs/phd_defense.png)
+^ Holding microphone to the president of the jury [Elvire Vaucher](https://scholar.google.ca/citations?user=shhSLlAAAAAJ&hl=fr) during official investiture.  
+Very hard not to laugh - this is the moment brain chose to remember many "is there a doctor on the plane" "im a doctor in computational neuroscience" memes.

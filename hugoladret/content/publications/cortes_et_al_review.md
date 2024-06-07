@@ -13,7 +13,7 @@ tags = [
 
 <!--more-->
 # TL;DR
-Pulvinar allows hierarchy of cortical area to skip hierarchical organisation\
+Pulvinar allows hierarchy of cortical area to skip hierarchical organisation.\
 Like writing an angry mail to your CEO, it can be useful for efficient communications.\
 True, especially in the context of predictive coding.
 
@@ -24,13 +24,12 @@ The brain is a distributed network - anything is a hub. Pulvinar is in the brain
 Important fact : reciprocal connections throughout the cortical hierarchy. The pulvinar doesn't care about hierarchy.
 ![Pulvinar connectivity](https://hugoladret.github.io/publications/imgs/cortes_et_al_review_1.jpg)
 
-What is the point of this ? Broadcasting ? Skipping queues ? Balancing everyone's activity ?
-
+What is the point of this ? Broadcasting ? Skipping queues ? Balancing everyone's activity ? \
 4 possibilities presented in the paper, 2 presented here.
 
 # Global workspace 
 Global Workspace Theory (GWT). Hypothesis on how consciousness arises from widespread information sharing across multiple brain regions. \
-Integration of information in a "workspace" involving neurons in multiples cortices.\ 
+Integration of information in a "workspace" involving neurons in multiples cortices. \
 Enables complex cognitive functions like decision-making, planning, and problem-solving. 
 
 Key idea: Conscious access results from information becoming globally available to various cognitive processes.
@@ -46,18 +45,19 @@ Pulvinar: access to most cortices - useful for this? An exampe: conscious detect
 
 ![GW](https://hugoladret.github.io/publications/imgs/cortes_et_al_review_2.jpg)
 
-Physiological evidence with electrical microstimulation of the thalamus evoking synchronized activity across multiple cortical areas.\  
+Physiological evidence with electrical microstimulation of the thalamus evoking synchronized activity across multiple cortical areas. \  
 Burst-like discharges in the pulvinar suggest that this activity enhances the likelihood of activating cortical neurons, helping them detect environmental changes.
 
 # Predictive coding 
-Predictive coding theory sees the brain as an inference engine. Brain builds an internal model to explain sensory input, making constant predictions about future states.\ 
+Predictive coding theory sees the brain as an inference engine. Brain builds an internal model to explain sensory input, making constant predictions about future states. \ 
 Model updated by prediction errors, discrepancies between predictions and reality. Neuroanatomically, feedback connections should carry predictions (top-down) and are compared to sensory inputs (bottom-up) to identify errors. 
 
-Brain selects representations (predictions) or new inputs (errors) to guide behavior accurately. Bayesian inference suggests the brain weighs information by precision, yet its implementation is debated.\ 
-Precision weighting, or inverse variance \(1/\sigma^2\) weighting, gain control mechanism, adjusts gain in predictions or errors.\
+Brain selects representations (predictions) or new inputs (errors) to guide behavior accurately. Bayesian inference suggests the brain weighs information by precision, yet its implementation is debated. \ 
+Precision weighting, or inverse variance \$1/\sigma^2\$ weighting, gain control mechanism, adjusts gain in predictions or errors. \
 
-Pulvinar may modulate precision in visual processing, fitting its connectivity and integration timescales.\ 
+Pulvinar may modulate precision in visual processing, fitting its connectivity and integration timescales. \ 
 Especially true when disrupting precision = seeing things that are not here = psychosis = symptom of schizophrenia = common result of pulvinar lesion.
+
 ![PC](https://hugoladret.github.io/publications/imgs/cortes_et_al_review_3.jpg)
 
 Good sources on this: Kanai et al. [1] for pulvinar and predictive coding; Keller et al. [2] for psychosis in predictive coding terms.
@@ -78,5 +78,4 @@ Important outstanding questions ! Another review coming on that, near future.
 
 
 # On a personal note
-Second pulvinar paper with Nelson, published almost exactly two years after the first one.
-
+Second pulvinar paper with Nelson, published almost exactly two years after the first one. 

@@ -1,6 +1,6 @@
 +++
 author = "Hugo Ladret, Christian Casanova, Laurent Perrinet"
-title = "[2024] [model] -- Kernel Heterogeneity Improves Sparseness of Natural Images Representations"
+title = "[2024] [model] -- Kernel heterogeneity improves sparseness of natural images representations"
 date = "2024-01-01"
 journal = "ArXiv preprint"
 description = "Ladret et al. 2024"
@@ -13,77 +13,72 @@ tags = [
 
 <!--more-->
 # TL;DR
-Sampling mean values is good for MNIST. Sampling mean + variance is better. Required, even, for natural inputs.  
-How to sample variance ? Same as with mean, sample it heterogeneously = better deep neural networks.
+How to sample variance ? Same as with mean, sample it heterogeneously = better deep neural networks for free.
 
 # Context
-Imagine hiking through a forest. Wind rustles leaves. Strange noise catches your attention. Squirrel ? Bird ? Lion ? Wait for instagram picture, or flee for survival ? Daily problem: making sense of unreliable sensory input.
+Learning representations of the world is learning about a continuum of values on an arbitrary space.
 
-This unreliability: inverse of information variance. Constant problem in vision. Images: numerous lines, "edges," like puzzle pieces.
+Learning images = learning representations of light (spaces = luminosity, contrast, colors, ...)
+Learning sound = learning representation of air compression (spaces = frequency, amplitude, ...)
 
-![Decomposition of natural images](https://hugoladret.github.io/publications/imgs/ladret_et_al_variance_V1_1.png)
+If learning how to represent MNIST images, sampling every luminosity point is OK. Low number of pixels, low complexity problem.  
+This is sampling mean of distribution.
 
-Puzzle pieces vary. Problem for the primary visual cortex. Human behavior known to take uncertainty as a decision factor [1,2].
+If learning how to representation real images, sampling mean of distribution not possible.  
+Complex distributions, mean is meaningless.
 
-Recent research: showed uncertainty-dependent activity in macaque primary visual cortex. Complex responses, mirroring human decision-making [3]. \
-Why and how responses exists ? Only theories until this paper.
+Solution one (top image below) : sample lots of mean. Precise but costly.  
+If representations ends up being same size as input, process useless.
 
-# Method
-Our research: examine neurons in primary visual cortex. Construct comprehensive interaction model. Visual stimuli: Motion Clouds, mimic natural image complexity [4].
+![Sampling of natural images](https://hugoladret.github.io/publications/imgs/ladret_et_al_sparsecoding_1.png)
 
-![Article Figure 1](https://hugoladret.github.io/publications/imgs/ladret_et_al_variance_V1_2.png)
+Solution two (bottom image above) : sample mean, describe succintly variance around it. Approximative, but efficient.  
+Useful, also gives idea of how much one bit of information varies with respect to others.
 
-# Results: single neurons
-Discovered phenomenon: neurons in primary visual cortex respond distinctly to image uncertainty. Two main types: "flat" (unchanged by increased variance), "non-linear" (response quickly destroyed by increased variance).
 
-![Article Figure 2](https://hugoladret.github.io/publications/imgs/ladret_et_al_variance_V1_3.png)
+# Natural images 
+For the problem of natural images, sampling variance very useful. Stereotypical pattern of distribution of orientations.
 
-Different timings: "flat" neurons respond slowly, "non-linear" neurons respond quickly.
+![Sampling of natural images](https://hugoladret.github.io/publications/imgs/ladret_et_al_sparsecoding_2.png)
 
-![Article Figure 3](https://hugoladret.github.io/publications/imgs/ladret_et_al_variance_V1_4.png)
 
-Labeled groups: "flat = "resilient" as opposed to "non-linear" = "vulnerable," clustered based on neural metrics.
+# Learning from this 
+If one tries to make models of these images (here, sparse coding), good models also get this distribution of orientations. 
 
-# Results: population of neurons
-Next question: what do these neurons do? Used neural decoding: guess neurons' "seeing" based on responses.
+![Sampling of natural images](https://hugoladret.github.io/publications/imgs/ladret_et_al_sparsecoding_3.png)
 
-![Neural Decoding](https://hugoladret.github.io/publications/imgs/ladret_et_al_variance_V1_6.png)
+Logical step : already give this distribution to the models. Save them time from figuring it out.  
+5 scenarii :
+* green = sample only mean (same uncertainty/variance sampling in the model)
+* blue = sample mean and variance (heterogeneous variance sampling)
+* orange = green + fine tuning on dataset 
+* purple = blue + fine tuning on dataset 
+* black = let the model learn everything (fine tuning on the dataset, without any intervention) 
 
-Both resilient and vulnerable neurons guessed average orientation well.
+![Sampling of natural images](https://hugoladret.github.io/publications/imgs/ladret_et_al_sparsecoding_4.png)
 
-![Article Figure 5](https://hugoladret.github.io/publications/imgs/ladret_et_al_variance_V1_7.png)
+Learning always gives best representation quality (Peak Signal to Noise Ratio, PSNR) and efficiency (sparseness).  
+Without learning, sampling variance massively boosts sparseness. Slight cost in quality. 
 
-Resilient neurons excelled in guessing both average orientation and complexity. Not vulnerable.
+Learning = finding the best of both worlds ! Simple task of reconstruction, no big difference. 
 
-![Article Figure 6](https://hugoladret.github.io/publications/imgs/ladret_et_al_variance_V1_8.png)
+Complex task ? Put that into a deep neural network that classifies images. 
 
-Specific neurons found in different cortex layers, connecting differently. Provided anatomical basis for two neuron groups.
+![Sampling of natural images](https://hugoladret.github.io/publications/imgs/ladret_et_al_sparsecoding_4.png)
 
-![Cortical Anatomy](https://hugoladret.github.io/publications/imgs/ladret_et_al_variance_V1_9.png)
+Sampling variance (last row, first column) much better for representations.  
 
-# Results: model
-Simulated differential anatomical basis using a computer model. Tweaking "recurrence" mimicked behavior of resilient and vulnerable neurons.
+Sampling variance (last row, second and third column) also much, much better than others methods when facing noise.   
+Here, cutting off a fraction of the coefficients (25% or 50%) does not significantly hinder the model. Performance collapses for other.
 
-![Article Figure 7](https://hugoladret.github.io/publications/imgs/ladret_et_al_variance_V1_10.png)
-
-# Overall
-Recurrence explains how neurons encode (or not) input variance. Findings support understanding of brain encoding complexity, not just average features, thanks to neuronal connectivity.
-
-![Article Figure 8](https://hugoladret.github.io/publications/imgs/ladret_et_al_variance_V1_11.png)
 
 # Relevance
-Crucial step in understanding how cortex handles "visual puzzles." Allows brain to perform complex probabilistic computations. Model gaining popularity in neuroscience [5].
+In previous paper ([Cortical recurrence something something sensory variance](https://hugoladret.github.io/publications/ladret_et_al_variance_V1/)), showed that neurons in actual brain compute variance.  
+Here, showed that this computation is very useful. Namely, prevents models from failing when facing noise. Important for brain, noisy machines !
 
-# References
-[1] Von Helmholtz, H. (1925). Helmholtz's treatise on physiological optics (Vol. 3). Optical Society of America.
+Full code in PyTorch - seamlessly integrate this into any deep neural network ! 
 
-[2] Barthelmé, S., & Mamassian, P. (2009). Evaluation of objective uncertainty in the visual system. PLoS computational biology, 5(9), e1000504.
-
-[3] Hénaff, O. J., Boundy-Singer, Z. M., Meding, K., Ziemba, C. M., & Goris, R. L. (2020). Representation of visual uncertainty through neural gain variability. Nature communications, 11(1), 2513.
-
-[4] Leon, P. S., Vanzetta, I., Masson, G. S., & Perrinet, L. U. (2012). Motion clouds: model-based stimulus synthesis of natural-like random textures for the study of motion perception. Journal of neurophysiology, 107(11), 3217-3226.
-
-[5] Spratling, M. W. (2016). A neural implementation of Bayesian inference based on predictive coding. Connection Science, 28(4), 346-383.
 
 # On a personal note
-Submitted this one on ArXiv right while shopping for christmas groceries !
+Talked myself into buying a new GPU for this paper.  
+Now mostly used for Cyberpunk 2077, rather than PyTorch. 

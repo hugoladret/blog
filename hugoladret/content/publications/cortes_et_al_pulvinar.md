@@ -9,7 +9,7 @@ tags = [
 ]
 +++
 
-[<i class="fa-solid fa-book"></i>](https://www.frontiersin.org/articles/10.3389/fncel.2021.787170/full) - [<i class="fa-solid fa-file-pdf"></i>](https://hugoladret.github.io/publications/cortes_et_al_pulvinar.pdf) - [<i class="fa-solid fa-quote-left"></i>](https://scholar.googleusercontent.com/scholar.bib?q=info:2rWuhDabRecJ:scholar.google.com/&output=citation&scisdr=CgUKAuoEEOK9kuLcTUA:AAGBfm0AAAAAZBnZVUBkRbCvg2xAo80_7651biNTTXmq&scisig=AAGBfm0AAAAAZBnZVWxcvy0mz_lUiJM_cNQ6rhQTTgEy&scisf=4&ct=citation&cd=-1&hl=fr) - [<i class="ai ai-biorxiv"></i>](https://www.biorxiv.org/content/10.1101/2021.09.10.459796v1)
+[<i class="fa-solid fa-book"></i>](https://www.frontiersin.org/articles/10.3389/fncel.2021.787170/full) - [<i class="fa-solid fa-file-pdf"></i>](https://hugoladret.github.io/publications/cortes_et_al_pulvinar.pdf) - [<i class="fa-solid fa-quote-left"></i>](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=pulvinar+gates+alpha&btnG=#d=gs_cit&t=1717748666778&u=%2Fscholar%3Fq%3Dinfo%3A2rWuhDabRecJ%3Ascholar.google.com%2F%26output%3Dcite%26scirp%3D0%26hl%3Dfr) - [<i class="ai ai-biorxiv"></i>](https://www.biorxiv.org/content/10.1101/2021.09.10.459796v1)
 
 <!--more-->
 # TL;DR

@@ -9,7 +9,7 @@ tags = [
 ]
 +++
 
-[<i class="fa-solid fa-newspaper"></i>](https://www.nature.com/articles/s42003-023-05042-3) - [<i class="fa-solid fa-file-pdf"></i>](https://hugoladret.github.io/publications/ladret_et_al_variance_V1.pdf) - [<i class="fa-solid fa-quote-left"></i>](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=n6dvyjwAAAAJ&citation_for_view=n6dvyjwAAAAJ:Tyk-4Ss8FVUC) - [<i class="fa-solid fa-globe"></i>](https://laurentperrinet.github.io/publication/ladret-23/) - [<i class="ai ai-biorxiv"></i>](https://www.biorxiv.org/content/10.1101/2021.03.30.437692v5)
+[<i class="fa-solid fa-newspaper"></i>](https://www.nature.com/articles/s42003-023-05042-3) - [<i class="fa-solid fa-file-pdf"></i>](https://hugoladret.github.io/publications/ladret_et_al_variance_V1.pdf) - [<i class="fa-solid fa-quote-left"></i>](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=cortical+recurrence+supports+resilience+to&btnG=&oq=cortical+#d=gs_cit&t=1717748727440&u=%2Fscholar%3Fq%3Dinfo%3ACm01jgCqz7UJ%3Ascholar.google.com%2F%26output%3Dcite%26scirp%3D0%26hl%3Den) - [<i class="fa-solid fa-globe"></i>](https://laurentperrinet.github.io/publication/ladret-23/) - [<i class="ai ai-biorxiv"></i>](https://www.biorxiv.org/content/10.1101/2021.03.30.437692v5)
 
 <!--more-->
 # TL;DR

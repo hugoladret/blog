@@ -1,6 +1,7 @@
 +++
 author = "Hugo Ladret, Christian Casanova, Laurent Perrinet"
-title = "[2024] [model] -- Kernel Heterogeneity Improves Sparseness of Natural Images Representations"
+title = "[2024] [model] -- Kernel Heterogeneity Improves Sparseness of Natural Images Representations
+"
 date = "2024-01-01"
 journal = "ArXiv preprint"
 description = "Ladret et al. 2024"
@@ -9,7 +10,7 @@ tags = [
 ]
 +++
 
-[<i class="fa-solid fa-newspaper"></i>](https://www.nature.com/articles/s42003-023-05042-3) - [<i class="fa-solid fa-file-pdf"></i>](https://hugoladret.github.io/publications/ladret_et_al_variance_V1.pdf) - [<i class="fa-solid fa-quote-left"></i>](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=n6dvyjwAAAAJ&citation_for_view=n6dvyjwAAAAJ:Tyk-4Ss8FVUC) - [<i class="fa-solid fa-globe"></i>](https://laurentperrinet.github.io/publication/ladret-23/) - [<i class="ai ai-biorxiv"></i>](https://www.biorxiv.org/content/10.1101/2021.03.30.437692v5)
+ - [<i class="fa-solid fa-file-pdf"></i>](https://hugoladret.github.io/publications/ladret_et_al_sparsecoding.pdf) - [<i class="fa-solid fa-globe"></i>](https://laurentperrinet.github.io/publication/ladret-23/) - [<i class="ai ai-arxiv"></i>](https://www.biorxiv.org/content/10.1101/2021.03.30.437692v5)
 
 <!--more-->
 # TL;DR

@@ -1,7 +1,6 @@
 +++
 author = "Hugo Ladret, Christian Casanova, Laurent Perrinet"
-title = "[2024] [model] -- Kernel Heterogeneity Improves Sparseness of Natural Images Representations
-"
+title = "[2024] [model] -- Kernel Heterogeneity Improves Sparseness of Natural Images Representations"
 date = "2024-01-01"
 journal = "ArXiv preprint"
 description = "Ladret et al. 2024"
@@ -14,8 +13,8 @@ tags = [
 
 <!--more-->
 # TL;DR
-Connections between neighboring cortical neurons allow neural networks to compute variance of sensory input. \
-Crucial for Bayesian computations in the brain. 
+Sampling mean values is good for MNIST. Sampling mean + variance is better. Required, even, for natural inputs.  
+How to sample variance ? Same as with mean, sample it heterogeneously = better deep neural networks.
 
 # Context
 Imagine hiking through a forest. Wind rustles leaves. Strange noise catches your attention. Squirrel ? Bird ? Lion ? Wait for instagram picture, or flee for survival ? Daily problem: making sense of unreliable sensory input.

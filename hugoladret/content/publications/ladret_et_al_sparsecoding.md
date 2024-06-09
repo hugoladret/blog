@@ -9,7 +9,7 @@ tags = [
 ]
 +++
 
- - [<i class="fa-solid fa-file-pdf"></i>](https://hugoladret.github.io/publications/ladret_et_al_sparsecoding.pdf) - [<i class="fa-solid fa-globe"></i>](https://laurentperrinet.github.io/publication/ladret-23/) - [<i class="ai ai-arxiv"></i>](https://www.biorxiv.org/content/10.1101/2021.03.30.437692v5)
+ - [<i class="fa-solid fa-file-pdf"></i>](https://hugoladret.github.io/publications/ladret_et_al_sparsecoding.pdf) - [<i class="fa-solid fa-globe"></i>](https://arxiv.org/abs/2312.14685)
 
 <!--more-->
 # TL;DR

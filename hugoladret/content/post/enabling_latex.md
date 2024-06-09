@@ -11,13 +11,7 @@ tags = [
 
 <!--more-->
 # The problem
-Enabling LaTeX equations on blog to make things beautiful.
-
-Before:
-\begin{aligned}
-p(v|u) = \frac{p(v)p(u|v)}{p(u)} \\ &= \frac{\frac{1}{\sqrt{2\pi\Sigma_p}} \exp{\frac{(v-v_p)^2}{2\Sigma_p}} \frac{1}{\sqrt{2\pi\Sigma_u}} \exp{\frac{(u-g(v))^2}{2\Sigma_u}}}{\int p(v) p(u|v)dv}.
-\end{aligned}
-After :
+Enabling LaTeX equations on blog to make things beautiful. Example: Bayes Theorem, gaussian assumption of variables.
 
 $$
 \begin{aligned}
@@ -25,7 +19,7 @@ p(v|u) = \frac{p(v)p(u|v)}{p(u)} \\ &= \frac{\frac{1}{\sqrt{2\pi\Sigma_p}} \exp{
 \end{aligned}
 $$
 
-Useful ! Takes less than two minutes, for this GitHub-hosted Hugo-based blog.  
+Useful ! Takes less than 2 minutes, for this GitHub-hosted Hugo-based blog.  
 In my specific case : 
 * Go to blog repository/static
 * Create a folder js, if not present 

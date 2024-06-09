@@ -1,6 +1,6 @@
 +++
 author = "Hugo Ladret"
-title = "[code] Enabling LaTeX on a Hugo Website\"
+title = "[ephys] [biblio] SUA vs MUA"
 date = "2024-06-09"
 description = """ 'I see. Here is the corrected version:' > ChatGPT, upon realizing that I meant LaTeX and not latex.
 """

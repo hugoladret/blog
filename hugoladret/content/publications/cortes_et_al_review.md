@@ -53,7 +53,7 @@ Predictive coding theory sees the brain as an inference engine. Brain builds an 
 Model updated by prediction errors, discrepancies between predictions and reality. Neuroanatomically, feedback connections should carry predictions (top-down) and are compared to sensory inputs (bottom-up) to identify errors. 
 
 Brain selects representations (predictions) or new inputs (errors) to guide behavior accurately. Bayesian inference suggests the brain weighs information by precision, yet its implementation is debated.  
-Precision weighting, or inverse variance \$1/\sigma^2\$ weighting, gain control mechanism, adjusts gain in predictions or errors.  
+Precision weighting, or inverse variance $$ 1/\sigma^2 $$ weighting, gain control mechanism, adjusts gain in predictions or errors.  
 
 Pulvinar may modulate precision in visual processing, fitting its connectivity and integration timescales.   
 Especially true when disrupting precision = seeing things that are not here = psychosis = symptom of schizophrenia = common result of pulvinar lesion.

@@ -14,11 +14,9 @@ tags = [
 Enabling LaTeX equations on blog to make things beautiful.
 
 Before:
-\begin{aligned}
 p(v|u) = \frac{p(v)p(u|v)}{p(u)} \\ &= \frac{\frac{1}{\sqrt{2\pi\Sigma_p}} \exp{\frac{(v-v_p)^2}{2\Sigma_p}} \frac{1}{\sqrt{2\pi\Sigma_u}} \exp{\frac{(u-g(v))^2}{2\Sigma_u}}}{\int p(v) p(u|v)dv}.
-\end{aligned}
-After :
 
+After :
 $$
 \begin{aligned}
 p(v|u) = \frac{p(v)p(u|v)}{p(u)} \\ &= \frac{\frac{1}{\sqrt{2\pi\Sigma_p}} \exp{\frac{(v-v_p)^2}{2\Sigma_p}} \frac{1}{\sqrt{2\pi\Sigma_u}} \exp{\frac{(u-g(v))^2}{2\Sigma_u}}}{\int p(v) p(u|v)dv}.
@@ -31,30 +29,14 @@ In my specific case :
 * Create a folder js, if not present 
 * Create a file mathjax-config.js with the contents 
 
-> """
-window.MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']],
-    displayMath: [['$$', '$$'], ['\\[', '\\]']]
-  },
-  svg: {
-    fontCache: 'global'
-  }
-};
-"""
+![enabling_js](https://hugoladret.github.io/post/imgs/enabling_latex_mathjax.png)
 
 * Go to blog repository/layouts
 * Create a folder partials, if not present 
 * Create a file head.html, in which you copy your themes' head.html file (same file structure as your blog, most likely in its own directory). 
 * At the end of the copy, append : 
 
-> """
-<!-- MathJax -->
-<script type="text/javascript" src="/js/mathjax-config.js"></script>
-<script type="text/javascript" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
-"""
+![enabling_js](https://hugoladret.github.io/post/imgs/enabling_latex_js.png)
 
 Commit, push, done. 
 

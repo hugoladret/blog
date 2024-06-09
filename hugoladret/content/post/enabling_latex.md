@@ -11,12 +11,17 @@ tags = [
 
 <!--more-->
 # The problem
-Enabling LaTeX equations on blog to make things beautiful. Example: Bayes theorem, gaussian distributions of variables.
+Enabling LaTeX equations on blog to make things beautiful.
+
+Before:
+\begin{aligned}
+p(v|u) = \frac{p(v)p(u|v)}{p(u)} \\ &= \frac{\frac{1}{\sqrt{2\pi\Sigma_p}} \exp{\frac{(v-v_p)^2}{2\Sigma_p}} \frac{1}{\sqrt{2\pi\Sigma_u}} \exp{\frac{(u-g(v))^2}{2\Sigma_u}}}{\int p(v) p(u|v)dv}.
+\end{aligned}
+After :
 
 $$
 \begin{aligned}
-p(v|u) &= \frac{p(v)p(u|v)}{p(u)} \\
-&= \frac{\frac{1}{\sqrt{2\pi\Sigma_p}} \exp{\frac{(v-v_p)^2}{2\Sigma_p}} \frac{1}{\sqrt{2\pi\Sigma_u}} \exp{\frac{(u-g(v))^2}{2\Sigma_u}}}{\int p(v) p(u|v)dv}
+p(v|u) = \frac{p(v)p(u|v)}{p(u)} \\ &= \frac{\frac{1}{\sqrt{2\pi\Sigma_p}} \exp{\frac{(v-v_p)^2}{2\Sigma_p}} \frac{1}{\sqrt{2\pi\Sigma_u}} \exp{\frac{(u-g(v))^2}{2\Sigma_u}}}{\int p(v) p(u|v)dv}.
 \end{aligned}
 $$
 
@@ -25,6 +30,7 @@ In my specific case :
 * Go to blog repository/static
 * Create a folder js, if not present 
 * Create a file mathjax-config.js with the contents 
+
 
 ![enabling_js](https://hugoladret.github.io/post/imgs/enabling_latex_mathjax.png)
 

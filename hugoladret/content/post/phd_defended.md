@@ -12,7 +12,7 @@ tags = [
 <!--more-->
 # Big news
 Finished not 1, but 2 PhDs ! (technically 2 times 1, let's settle for 1.5)\ 
-Went through 4.5 years of "cotutelle" journey, resulted in doctorate from both Université de Montréal and Aix-Marseille University.\
+Went through 4.5 years of "cotutelle" journey, resulted in doctorate from both Université de Montréal and Aix-Marseille University.  
 Fun experience, except for nightmarish administrative BS.
 
 Overall, challenging, fulfilling experience. Tackled simple problem: implementation of probabilistic computations in the brain. Two simultaneous angles of attack for this.
@@ -34,6 +34,7 @@ Onward to new adventures in April!
 
 
 # Fun fact
-![defensepic]((https://hugoladret.github.io/post/imgs/phd_defense.png)
+![defensepic](https://hugoladret.github.io/post/imgs/phd_defense.png)  
 ^ Holding microphone to the president of the jury [Elvire Vaucher](https://scholar.google.ca/citations?user=shhSLlAAAAAJ&hl=fr) during official investiture.  
-Very hard not to laugh - this is the moment brain chose to remember many "is there a doctor on the plane" "im a doctor in computational neuroscience" memes.
+Very hard not to laugh - this is the moment brain chose to remember many "is there a doctor here" "im a doctor in computational neuroscience" memes.
+![memedefense](https://hugoladret.github.io/post/imgs/phd_meme.png)  

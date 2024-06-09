@@ -1,6 +1,6 @@
 +++
 author = "Hugo Ladret"
-title = "[ephys] [biblio] Enabling LaTeX on a Hugo website"
+title = "[code] Enabling LaTeX on a Hugo website"
 date = "2024-06-09"
 description = """ 'I see. Here is the corrected version:' > ChatGPT, upon realizing that I meant LaTeX and not latex.
 """
@@ -15,7 +15,7 @@ Enabling LaTeX equations on blog to make things beautiful. Example: Bayes Theore
 
 $$
 \begin{aligned}
-p(v|u) = \frac{p(v)p(u|v)}{p(u)} \\ &= \frac{\frac{1}{\sqrt{2\pi\Sigma_p}} \exp{\frac{(v-v_p)^2}{2\Sigma_p}} \frac{1}{\sqrt{2\pi\Sigma_u}} \exp{\frac{(u-g(v))^2}{2\Sigma_u}}}{\int p(v) p(u|v)dv}.
+p(v|u) = \frac{p(v)p(u|v)}{p(u)} \\ &= \frac{\frac{1}{\sqrt{2\pi\Sigma_p}} \exp{\frac{(v-v_p)^2}{2\Sigma_p}} \frac{1}{\sqrt{2\pi\Sigma_u}} \exp{\frac{(u-g(v))^2}{2\Sigma_u}}}{\int p(v) p(u|v)dv}
 \end{aligned}
 $$
 

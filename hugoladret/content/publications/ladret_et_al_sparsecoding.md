@@ -64,7 +64,7 @@ Learning = finding the best of both worlds ! Simple task of reconstruction, no b
 
 Complex task ? Put that into a deep neural network that classifies images. 
 
-![Sampling of natural images](https://hugoladret.github.io/publications/imgs/ladret_et_al_sparsecoding_4.png)
+![Sampling of natural images](https://hugoladret.github.io/publications/imgs/ladret_et_al_sparsecoding_5.png)
 
 Sampling variance (last row, first column) much better for representations.  
 

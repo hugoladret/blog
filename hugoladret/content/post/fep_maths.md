@@ -43,7 +43,7 @@ $$
 We get:
 $$
 \begin{equation}
-  \begin{aligned}
+  \begin{align}
     F &= \ln p(\Phi) + \ln p(u|\Phi) \\ 
       &=\ln \left( \frac{1}{\sqrt{2\pi\Sigma_p}} \exp{-\frac{(\Phi-v_p)^2}{2\Sigma_p}}\right) + \ln \left( \frac{1}{\sqrt{2\pi\Sigma_u}} \exp{-\frac{(u-g(\Phi))^2}{2\Sigma_u}} \right) \\
       &= \ln \left( \frac{1}{\sqrt{2\pi\Sigma_p}} \right) + \ln \left(\exp{-\frac{(\Phi-v_p)^2}{2\Sigma_p}} \right) + 
@@ -51,13 +51,13 @@ $$
       &= \ln \left( \frac{1}{\sqrt{2\pi}} \right) - \frac{1}{2} \ln \Sigma_p- \frac{(\Phi-v_p)^2}{2\Sigma_p} + 
             \ln \left( \frac{1}{\sqrt{2\pi}} \right) - \frac{1}{2} \ln \Sigma_u -  \frac{(u-g(\Phi))^2}{2\Sigma_u} \\ 
       &=  \frac{1}{2} \left( - \ln \Sigma_p - \frac{(\Phi - v_p)^2}{\Sigma_p}  - \ln \Sigma_u - \frac{(u - g(\Phi))^2}{\Sigma_u}\right) + C
-  \end{aligned}
+  \end{align}
 \end{equation}
 $$
 We now seek the maximum likelihood - we compute the derivative of $F$ over the surrogate value $\Phi$:
 $$
 \begin{equation}
-    \begin{aligned}
+    \begin{align}
         \frac{\delta F}{\delta \Phi} &= 
 \frac{1}{2} \left(
 \frac{\delta}{\delta \Phi}     \left(-\frac{(u - g(\Phi))^2}{\Sigma_u}\right) +
@@ -70,13 +70,13 @@ $$
 \left( -\frac{1}{\Sigma_u} \frac{\delta}{\delta \Phi} (u-g(\Phi))^2) \right) +
 \left( -\frac{1}{\Sigma_p} \frac{\delta}{\delta \Phi} (\Phi-v_p)^2 \right)
 \right)
-    \end{aligned}
+    \end{align}
 \end{equation}
 $$
 
 Applying the power rule $(f(x)^n)' = n f(x)^{n-1} f'(x)$:
 \begin{equation}
-    \begin{aligned}
+    \begin{align}
         \frac{\delta F}{\delta \Phi} &= \frac{1}{2} \left(
 \left( -\frac{1}{\Sigma_u} 2(u-g(\Phi))\frac{\delta}{\delta \Phi} (u-g(\Phi)) \right) +
 \left( -\frac{1}{\Sigma_p} 2(\Phi-v_p) \frac{\delta}{\delta \Phi} (\Phi-v_p) \right)
@@ -92,17 +92,17 @@ Applying the power rule $(f(x)^n)' = n f(x)^{n-1} f'(x)$:
 &= \left( \frac{1}{\Sigma_u} (u-g(\Phi))(g'(\Phi)) \right) +
 \left( -\frac{1}{\Sigma_p} (\Phi-v_p) \right) \\
 &= \frac{(u-g(\Phi))}{\Sigma_u} g'(\Phi)  + \frac{(v_p-\Phi)}{\Sigma_p}  
-    \end{aligned}
+    \end{align}
 \end{equation}
 $$
 
 We can rewrite this as:
 $$
 \begin{equation}
-\begin{aligned}
+\begin{align}
     \epsilon_p &= \frac{(v_p-\Phi)}{\Sigma_p} \\
     \epsilon_u &= \frac{(u - g(\Phi))}{\Sigma_u}
-\end{aligned}
+\end{align}
 \end{equation}
 $$
 
@@ -131,31 +131,31 @@ $F$ is the variational free energy, and relates to certain useful information th
 PC seeks to maximize prediction efficiency by minimizing prediction errors. When minimal, they are at a stable point of $\epsilon_p$ and $\epsilon_u$ defined as:
 $$
 \begin{equation}
-    \begin{aligned}
+    \begin{align}
         \epsilon_p &= \frac{\Phi - v_p}{\Sigma_p} \\
         \Sigma_p\epsilon_p &= \Phi - v_p \\
         \Phi - v_p - \Sigma_p\epsilon_p &= 0 
-    \end{aligned}
+    \end{align}
 \end{equation}
 $$
 
 $$
 \begin{equation}
-    \begin{aligned}
+    \begin{align}
         \epsilon_u &= \frac{u - g(\Phi)}{\Sigma_u} \\
         \Sigma_u\epsilon_u &= u - g(\Phi)\\
          u - g(\Phi) - \varSigma_u \varepsilon_u &= 0
-    \end{aligned}
+    \end{align}
 \end{equation}
 $$
 
 And thus, minimizing prediction errors to infer the most likely value of $\Phi$ in an MLE approach is: 
 $$
 \begin{equation}
-\begin{aligned}
+\begin{align}
 \dot{\varepsilon_p} &= \Phi - v_p - \varSigma_p \varepsilon_p  \\
 \dot{\varepsilon_u} &= u - g(\Phi) - \varSigma_u \varepsilon_u  \\
-\end{aligned}
+\end{align}
 \end{equation}
 $$
 
@@ -170,48 +170,48 @@ Instead of facing computationally untractable normalization terms, or arbitraril
 We thus change from MLE to approximating posterior $p(v|u)$ using $q(v)$. This requires a metric of difference, or divergence, between the two distributions. For instance, the Kullback-Leibler divergence:
 $$
 \begin{equation}
-\begin{aligned}
+\begin{align}
     KL(q(v), p(v|u)) &= \int{q(v) \ln \frac{q(v)}{p(v|u)} dv}
-\end{aligned}
+\end{align}
 \end{equation}
 $$
 
 Still, implausible for a biological network to measure this difference due to the same issue of computational intractability of $p(v|u)$ that led us to MLE. Indeed: 
 $$
 \begin{equation}
-\begin{aligned}
+\begin{align}
     p(v|u) = \frac{p(u, v)}{p(u)} = \frac{p(u, v)}{\int p(v) p(u|v)dv}
-\end{aligned}
+\end{align}
 \end{equation}
 $$
 
 Expanding the KL divergence using the above, we see:
 $$
 \begin{equation}
-    \begin{aligned}
+    \begin{align}
         KL(q(v), p(v|u)) & = \int{q(v) \ln \frac{q(v)}{p(v|u)} dv} \\ 
                         &= \int{q(v) \ln \frac{q(v)p(u)}{p(u,v)} dv} \\
                         &= \int{q(v) \ln \frac{q(v)}{p(u,v)} dv} + \int{q(v) \ln p(u) dv} \\
-    \end{aligned}
+    \end{align}
 \end{equation}
 $$
 
 given that the surrogate $q(v)$ is a probability distribution which sums up to $1$, we get:
 $$
 \begin{equation}
-    \begin{aligned}
+    \begin{align}
         KL(q(v), p(v|u)) = \int{q(v) \ln \frac{q(v)}{p(u,v)} dv} + \ln p(u) \
-    \end{aligned}
+    \end{align}
 \end{equation}
 $$
 
 We can then define a term that simplifies everything, once again called $F$, defined as:
 $$
 \begin{equation}
-    \begin{aligned}
+    \begin{align}
         F &= \int q(v) \ln \frac{q(v)}{p(u,v)} dv \\
         KL (q(v), p(v|u)) &= F + \ln p(u)
-    \end{aligned}
+    \end{align}
 \end{equation}
 $$
 
@@ -230,10 +230,10 @@ Then, maximizing $F$ minimizes surprise or uncertainty of $\ln p(u)$ improving t
 This allows to update the uncertainty parameters - we can now rewrite:
 $$
 \begin{equation}
-\begin{aligned}
+\begin{align}
     \ln p(u) & = F+ KL (q(v), p(v|u)) \\
             & = \frac{1}{2} \left[ - \ln \Sigma_p - \frac{(\Phi - v_p)^2}{\Sigma_p}  - \ln \Sigma_u - \frac{(u - g(\Phi))^2}{\Sigma_u}\right] + C + KL (q(v), p(v|u))
-\end{aligned}
+\end{align}
 \end{equation}
 $$
 
@@ -242,7 +242,7 @@ as the KL divergence is a strictly positive term that forms a lower bound on sur
 Starting from this definition, we can now derive $F$ to optimize $v_p$:
 $$
 \begin{equation}
-\begin{aligned}
+\begin{align}
 \frac{\delta F}{\delta v_p} &=
 \frac{1}{2} \left(
 \frac{\delta}{\delta v_p} \left( - \frac{(\Phi - v_p)^2}{\Sigma_p} \right) +
@@ -268,14 +268,14 @@ $$
 \left(\frac{\delta}{\delta v_p} \Phi -
 \frac{\delta}{\delta v_p} v_p\right) \\
 &= \frac{\Phi - v_p}{\Sigma_p}
-\end{aligned}
+\end{align}
 \end{equation}
 $$
 
 The same can be done for $\Sigma_p$:
 $$
 \begin{equation}
-\begin{aligned}
+\begin{align}
 \frac{\delta F }{\delta \Sigma_p} &= 
 \frac{1}{2} \left(
 \frac{\delta}{\delta \Sigma_p} \left( - \frac{(\Phi - v_p)^2}{\Sigma_p} \right) +
@@ -307,14 +307,14 @@ $$
 \frac{(\Phi - v_p)^2}{\Sigma_p^2} 
 - \frac{1}{\Sigma_p}
 \right)
-\end{aligned}
+\end{align}
 \end{equation}
 $$
 
 Likewise, for $\Sigma_u$:
 $$
 \begin{equation}
-\begin{aligned}
+\begin{align}
 \frac{\delta F }{\delta \Sigma_u} &=
 \frac{1}{2} \left(
 \frac{\delta}{\delta \Sigma_u} \left( - \frac{(\Phi - v_p)^2}{\Sigma_p} \right) +
@@ -343,7 +343,7 @@ $$
 \frac{(u - g(\Phi))^2}{\Sigma_u^2} -
 \frac{1}{\Sigma_u}
 \right)\\
-\end{aligned}
+\end{align}
 \end{equation}
 $$
 
@@ -351,11 +351,11 @@ Yielding the learned parameters of a predictive coding network:
 $$
 \begin{equation}
 \label{eq_df_derror_final}
-    \begin{aligned}
+    \begin{align}
     \frac{\delta F}{\delta v_p} &= \frac{\Phi - v_p}{{\Sigma_p}} = \epsilon_p \\
     \frac{\delta F}{\delta \Sigma_p} &= \frac{1}{2} \left[ \frac{(\Phi - v_p)^2}{{\Sigma_p^2}} - \frac{1}{{\Sigma_p}} \right]  = \frac{1}{2} \left(\epsilon_p^2 - {\Sigma_p^{-1}} \right) \\
     \frac{\delta F}{\delta \Sigma_u} &=  \frac{1}{2} \left[ \frac{(u - g(\Phi))^2}{{\Sigma_u^2}} - \frac{1}{{\Sigma_u}} \right] = \frac{1}{2} \left(\epsilon_u^2 - {\Sigma_u^{-1}} \right)
-    \end{aligned}
+    \end{align}
 \end{equation}
 $$
 

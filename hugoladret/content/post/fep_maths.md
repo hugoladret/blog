@@ -242,8 +242,8 @@ as the KL divergence is a strictly positive term that forms a lower bound on sur
 Starting from this definition, we can now derive $F$ to optimize $v_p$:
 $$
 \begin{equation}
-    \begin{aligned}
-        \frac{\delta F}{\delta v_p} &=
+\begin{aligned}
+\frac{\delta F}{\delta v_p} &=
 \frac{1}{2} \left(
 \frac{\delta}{\delta v_p} \left( - \frac{(\Phi - v_p)^2}{\Sigma_p} \right) +
 \frac{\delta}{\delta v_p} \left( - \frac{(u - g(\Phi))^2}{\Sigma_u} \right) +
@@ -268,7 +268,7 @@ $$
 \left(\frac{\delta}{\delta v_p} \Phi -
 \frac{\delta}{\delta v_p} v_p\right) \\
 &= \frac{\Phi - v_p}{\Sigma_p}
-    \end{aligned}
+\end{aligned}
 \end{equation}
 $$
 

@@ -39,26 +39,26 @@ $$
 We get:
 $$
 \begin{align}
-F &= \ln p(\Phi) + \ln p(u|\Phi) \\ 
-  &= \ln \left( \frac{1}{\sqrt{2\pi\Sigma_p}} \exp{-\frac{(\Phi-v_p)^2}{2\Sigma_p}}\right) + \ln \left( \frac{1}{\sqrt{2\pi\Sigma_u}} \exp{-\frac{(u-g(\Phi))^2}{2\Sigma_u}} \right) \\
-  &= \ln \left( \frac{1}{\sqrt{2\pi\Sigma_p}} \right) + \ln \left(\exp{-\frac{(\Phi-v_p)^2}{2\Sigma_p}} \right) + \ln \left( \frac{1}{\sqrt{2\pi\Sigma_u}} \right) + \ln \left(\exp{-\frac{(u-g(\Phi))^2}{2\Sigma_u}} \right) \\
-  &= \ln \left( \frac{1}{\sqrt{2\pi}} \right) - \frac{1}{2} \ln \Sigma_p- \frac{(\Phi-v_p)^2}{2\Sigma_p} + \ln \left( \frac{1}{\sqrt{2\pi}} \right) - \frac{1}{2} \ln \Sigma_u -  \frac{(u-g(\Phi))^2}{2\Sigma_u} \\ 
-  &= \frac{1}{2} \left( - \ln \Sigma_p - \frac{(\Phi - v_p)^2}{\Sigma_p}  - \ln \Sigma_u - \frac{(u - g(\Phi))^2}{\Sigma_u}\right) + C
+F & = \ln p(\Phi) + \ln p(u|\Phi) \\\\  
+  & = \ln \left( \frac{1}{\sqrt{2\pi\Sigma_p}} \exp{-\frac{(\Phi-v_p)^2}{2\Sigma_p}}\right) + \ln \left( \frac{1}{\sqrt{2\pi\Sigma_u}} \exp{-\frac{(u-g(\Phi))^2}{2\Sigma_u}} \right) \\\\  
+  & = \ln \left( \frac{1}{\sqrt{2\pi\Sigma_p}} \right) + \ln \left(\exp{-\frac{(\Phi-v_p)^2}{2\Sigma_p}} \right) + \ln \left( \frac{1}{\sqrt{2\pi\Sigma_u}} \right) + \ln \left(\exp{-\frac{(u-g(\Phi))^2}{2\Sigma_u}} \right) \\\\  
+  & = \ln \left( \frac{1}{\sqrt{2\pi}} \right) - \frac{1}{2} \ln \Sigma_p- \frac{(\Phi-v_p)^2}{2\Sigma_p} + \ln \left( \frac{1}{\sqrt{2\pi}} \right) - \frac{1}{2} \ln \Sigma_u -  \frac{(u-g(\Phi))^2}{2\Sigma_u} \\\\   
+  & = \frac{1}{2} \left( - \ln \Sigma_p - \frac{(\Phi - v_p)^2}{\Sigma_p}  - \ln \Sigma_u - \frac{(u - g(\Phi))^2}{\Sigma_u}\right) + C
 \end{align}
 $$
 
 We now seek the maximum likelihood - we compute the derivative of $F$ over the surrogate value $\Phi$:
 $$
     \begin{align}
-        \frac{\delta F}{\delta \Phi} &= 
+        \frac{\delta F}{\delta \Phi} & = 
 \frac{1}{2} \left(
 \frac{\delta}{\delta \Phi}     \left(-\frac{(u - g(\Phi))^2}{\Sigma_u}\right) +
 \frac{\delta}{\delta \Phi}     \left(-\frac{(\Phi - v_p)^2}{\Sigma_p}\right) + 
 \frac{\delta}{\delta \Phi}      \left( -\ln\Sigma_u \right) + 
 \frac{\delta}{\delta \Phi}      \left( -\ln\Sigma_p \right) + 
 \frac{\delta}{\delta \Phi}      C
-\right) \\
-&= \frac{1}{2} \left(
+\right) \\\\
+& = \frac{1}{2} \left(
 \left( -\frac{1}{\Sigma_u} \frac{\delta}{\delta \Phi} (u-g(\Phi))^2) \right) +
 \left( -\frac{1}{\Sigma_p} \frac{\delta}{\delta \Phi} (\Phi-v_p)^2 \right)
 \right)
@@ -68,29 +68,29 @@ $$
 Applying the power rule $(f(x)^n)' = n f(x)^{n-1} f'(x)$:
 $$
     \begin{align}
-        \frac{\delta F}{\delta \Phi} &= \frac{1}{2} \left(
+        \frac{\delta F}{\delta \Phi} & = \frac{1}{2} \left(
 \left( -\frac{1}{\Sigma_u} 2(u-g(\Phi))\frac{\delta}{\delta \Phi} (u-g(\Phi)) \right) +
 \left( -\frac{1}{\Sigma_p} 2(\Phi-v_p) \frac{\delta}{\delta \Phi} (\Phi-v_p) \right)
-\right) \\
-&= \frac{1}{2} \left(
+\right) \\\\
+& = \frac{1}{2} \left(
 \left( -\frac{1}{\Sigma_u} 2(u-g(\Phi)) \left(\frac{\delta}{\delta \Phi} u - \frac{\delta}{\delta \Phi} g(\Phi)\right) \right) +
 \left( -\frac{1}{\Sigma_p} 2(\Phi-v_p) \left(\frac{\delta}{\delta \Phi} \Phi - \frac{\delta}{\delta \Phi} v_p \right)\right)
-\right) \\
-&= \frac{1}{2} \left(
+\right) \\\\
+& = \frac{1}{2} \left(
 \left( -\frac{1}{\Sigma_u} 2(u-g(\Phi))(-g'(\Phi)) \right) +
 \left( -\frac{1}{\Sigma_p} 2(\Phi-v_p) \right)
-\right) \\
-&= \left( \frac{1}{\Sigma_u} (u-g(\Phi))(g'(\Phi)) \right) +
-\left( -\frac{1}{\Sigma_p} (\Phi-v_p) \right) \\
-&= \frac{(u-g(\Phi))}{\Sigma_u} g'(\Phi)  + \frac{(v_p-\Phi)}{\Sigma_p}  
+\right) \\\\
+& = \left( \frac{1}{\Sigma_u} (u-g(\Phi))(g'(\Phi)) \right) +
+\left( -\frac{1}{\Sigma_p} (\Phi-v_p) \right) \\\\
+& = \frac{(u-g(\Phi))}{\Sigma_u} g'(\Phi)  + \frac{(v_p-\Phi)}{\Sigma_p}  
     \end{align}
 $$
 
 We can rewrite this as:
 $$
 \begin{align}
-    \epsilon_p &= \frac{(v_p-\Phi)}{\Sigma_p} \\
-    \epsilon_u &= \frac{(u - g(\Phi))}{\Sigma_u}
+    \epsilon_p & = \frac{(v_p-\Phi)}{\Sigma_p} \\\\
+    \epsilon_u & = \frac{(u - g(\Phi))}{\Sigma_u}
 \end{align}
 $$
 
@@ -115,25 +115,25 @@ $F$ is the variational free energy, and relates to certain useful information th
 PC seeks to maximize prediction efficiency by minimizing prediction errors. When minimal, they are at a stable point of $\epsilon_p$ and $\epsilon_u$ defined as:
 $$
     \begin{align}
-        \epsilon_p &= \frac{\Phi - v_p}{\Sigma_p} \\
-        \Sigma_p\epsilon_p &= \Phi - v_p \\
-        \Phi - v_p - \Sigma_p\epsilon_p &= 0 
+        \epsilon_p & = \frac{\Phi - v_p}{\Sigma_p} \\\\
+        \Sigma_p\epsilon_p & = \Phi - v_p \\\\
+        \Phi - v_p - \Sigma_p\epsilon_p & = 0 
     \end{align}
 $$
 
 $$
     \begin{align}
-        \epsilon_u &= \frac{u - g(\Phi)}{\Sigma_u} \\
-        \Sigma_u\epsilon_u &= u - g(\Phi)\\
-         u - g(\Phi) - \varSigma_u \varepsilon_u &= 0
+        \epsilon_u & = \frac{u - g(\Phi)}{\Sigma_u} \\\\
+        \Sigma_u\epsilon_u & = u - g(\Phi)\\\\
+         u - g(\Phi) - \varSigma_u \varepsilon_u & = 0
     \end{align}
 $$
 
 And thus, minimizing prediction errors to infer the most likely value of $\Phi$ in an MLE approach is: 
 $$
 \begin{align}
-\dot{\varepsilon_p} &= \Phi - v_p - \varSigma_p \varepsilon_p  \\
-\dot{\varepsilon_u} &= u - g(\Phi) - \varSigma_u \varepsilon_u  \\
+\dot{\varepsilon_p} & = \Phi - v_p - \varSigma_p \varepsilon_p  \\\\
+\dot{\varepsilon_u} & = u - g(\Phi) - \varSigma_u \varepsilon_u  \\\\
 \end{align}
 $$
 
@@ -148,7 +148,7 @@ Instead of facing computationally untractable normalization terms, or arbitraril
 We thus change from MLE to approximating posterior $p(v|u)$ using $q(v)$. This requires a metric of difference, or divergence, between the two distributions. For instance, the Kullback-Leibler divergence:
 $$
 \begin{align}
-    KL(q(v), p(v|u)) &= \int{q(v) \ln \frac{q(v)}{p(v|u)} dv}
+    KL(q(v), p(v|u)) & = \int{q(v) \ln \frac{q(v)}{p(v|u)} dv}
 \end{align}
 $$
 
@@ -162,9 +162,9 @@ $$
 Expanding the KL divergence using the above, we see:
 $$
     \begin{align}
-        KL(q(v), p(v|u)) & = \int{q(v) \ln \frac{q(v)}{p(v|u)} dv} \\ 
-                        &= \int{q(v) \ln \frac{q(v)p(u)}{p(u,v)} dv} \\
-                        &= \int{q(v) \ln \frac{q(v)}{p(u,v)} dv} + \int{q(v) \ln p(u) dv} \\
+        KL(q(v), p(v|u)) & = \int{q(v) \ln \frac{q(v)}{p(v|u)} dv} \\\\ 
+                        & = \int{q(v) \ln \frac{q(v)p(u)}{p(u,v)} dv} \\\\
+                        & = \int{q(v) \ln \frac{q(v)}{p(u,v)} dv} + \int{q(v) \ln p(u) dv} \\\\
     \end{align}
 $$
 
@@ -178,8 +178,8 @@ $$
 We can then define a term that simplifies everything, once again called $F$, defined as:
 $$
     \begin{align}
-        F &= \int q(v) \ln \frac{q(v)}{p(u,v)} dv \\
-        KL (q(v), p(v|u)) &= F + \ln p(u)
+        F & = \int q(v) \ln \frac{q(v)}{p(u,v)} dv \\\\
+        KL (q(v), p(v|u)) & = F + \ln p(u)
     \end{align}
 $$
 
@@ -196,7 +196,7 @@ Then, maximizing $F$ minimizes surprise or uncertainty of $\ln p(u)$ improving t
 This allows to update the uncertainty parameters - we can now rewrite:
 $$
 \begin{align}
-    \ln p(u) & = F+ KL (q(v), p(v|u)) \\
+    \ln p(u) & = F+ KL (q(v), p(v|u)) \\\\
             & = \frac{1}{2} \left[ - \ln \Sigma_p - \frac{(\Phi - v_p)^2}{\Sigma_p}  - \ln \Sigma_u - \frac{(u - g(\Phi))^2}{\Sigma_u}\right] + C + KL (q(v), p(v|u))
 \end{align}
 $$
@@ -206,64 +206,64 @@ as the KL divergence is a strictly positive term that forms a lower bound on sur
 Starting from this definition, we can now derive $F$ to optimize $v_p$:
 $$
 \begin{align}
-\frac{\delta F}{\delta v_p} &=
+\frac{\delta F}{\delta v_p} & =
 \frac{1}{2} \left(
 \frac{\delta}{\delta v_p} \left( - \frac{(\Phi - v_p)^2}{\Sigma_p} \right) +
 \frac{\delta}{\delta v_p} \left( - \frac{(u - g(\Phi))^2}{\Sigma_u} \right) +
 \frac{\delta}{\delta v_p} \left( - \ln \Sigma_u  \right) + 
 \frac{\delta}{\delta v_p} \left( - \ln \Sigma_p  \right) + 
 \right)
-\frac{\delta}{\delta v_p} C \\
- &= \frac{1}{2} \left(
+\frac{\delta}{\delta v_p} C \\\\
+ & = \frac{1}{2} \left(
 \frac{\delta}{\delta v_p} \left( - \frac{(\Phi - v_p)^2}{\Sigma_p} \right) 
-\right) \\
+\right) \\\\
 & = \frac{1}{2} \left(
 \frac{1}{-\Sigma_p}
 \frac{\delta}{\delta v_p} (\Phi - v_p)^2
-\right) \\
-&= 
+\right) \\\\
+& = 
 \frac{1}{-\Sigma_p}
 (\Phi - v_p)
-\frac{\delta}{\delta v_p} (\Phi - v_p) \\
-&= 
+\frac{\delta}{\delta v_p} (\Phi - v_p) \\\\
+& = 
 \frac{1}{-\Sigma_p}
 (\Phi - v_p)
 \left(\frac{\delta}{\delta v_p} \Phi -
-\frac{\delta}{\delta v_p} v_p\right) \\
-&= \frac{\Phi - v_p}{\Sigma_p}
+\frac{\delta}{\delta v_p} v_p\right) \\\\
+& = \frac{\Phi - v_p}{\Sigma_p}
 \end{align}
 $$
 
 The same can be done for $\Sigma_p$:
 $$
 \begin{align}
-\frac{\delta F }{\delta \Sigma_p} &= 
+\frac{\delta F }{\delta \Sigma_p} & = 
 \frac{1}{2} \left(
 \frac{\delta}{\delta \Sigma_p} \left( - \frac{(\Phi - v_p)^2}{\Sigma_p} \right) +
 \frac{\delta}{\delta \Sigma_p} \left( - \frac{(u - g(\Phi))^2}{\Sigma_u} \right) +
 \frac{\delta}{\delta \Sigma_p} \left( - \ln \Sigma_u  \right) + 
 \frac{\delta}{\delta \Sigma_p} \left( - \ln \Sigma_p  \right)  
 \right) +
-\frac{\delta}{\delta \Sigma_p} C \\
-&= 
+\frac{\delta}{\delta \Sigma_p} C \\\\
+& = 
 \frac{1}{2} \left(
 - \frac{\delta}{\delta \Sigma_p} \ln \Sigma_p +
 \left( - (\Phi - v_p)^2
 \frac{\delta}{\delta \Sigma_p} \frac{1}{\Sigma_p} \right) 
-\right) \\
-&= 
+\right) \\\\
+& = 
 \frac{1}{2} \left(
 - \frac{1}{\Sigma_p} +
 \left(  (\Phi - v_p)^2
 \frac{\frac{\delta}{\delta \Sigma_p} \Sigma_p}{\Sigma_p^2} \right) 
-\right) \\
-&= 
+\right) \\\\
+& = 
 \frac{1}{2} \left(
 (\Phi - v_p)^2
 \frac{\frac{\delta}{\delta \Sigma_p} \Sigma_p}{\Sigma_p^2} 
 - \frac{1}{\Sigma_p}
-\right) \\
-&= 
+\right) \\\\
+& = 
 \frac{1}{2} \left(
 \frac{(\Phi - v_p)^2}{\Sigma_p^2} 
 - \frac{1}{\Sigma_p}
@@ -274,43 +274,43 @@ $$
 Likewise, for $\Sigma_u$:
 $$
 \begin{align}
-\frac{\delta F }{\delta \Sigma_u} &=
+\frac{\delta F }{\delta \Sigma_u} & =
 \frac{1}{2} \left(
 \frac{\delta}{\delta \Sigma_u} \left( - \frac{(\Phi - v_p)^2}{\Sigma_p} \right) +
 \frac{\delta}{\delta \Sigma_u} \left( - \frac{(u - g(\Phi))^2}{\Sigma_u} \right) +
 \frac{\delta}{\delta \Sigma_u} \left( - \ln \Sigma_u \right) +
 \frac{\delta}{\delta \Sigma_u} \left( - \ln \Sigma_p \right)
 \right) +
-\frac{\delta}{\delta \Sigma_u} C\\
-&=
+\frac{\delta}{\delta \Sigma_u} C\\\\
+& =
 \frac{1}{2} \left(
 \frac{\delta}{\delta \Sigma_u} \left( - \frac{(u - g(\Phi))^2}{\Sigma_u} \right) -
 \frac{\delta}{\delta \Sigma_u} \ln \Sigma_u
-\right)\\
-&=
+\right)\\\\
+& =
 \frac{1}{2} \left(
 -(u - g(\Phi))^2 \frac{\delta}{\delta \Sigma_u} \frac{1}{\Sigma_u} -
 \frac{\delta}{\delta \Sigma_u} \ln \Sigma_u
-\right)\\
-&=
+\right)\\\\
+& =
 \frac{1}{2} \left(
 -(u - g(\Phi))^2 \frac{\delta}{\delta \Sigma_u} \frac{1}{\Sigma_u} -
 \frac{1}{\Sigma_u}
-\right)\\
-&=
+\right)\\\\
+& =
 \frac{1}{2} \left(
 \frac{(u - g(\Phi))^2}{\Sigma_u^2} -
 \frac{1}{\Sigma_u}
-\right)\\
+\right)\\\\
 \end{align}
 $$
 
 Yielding the learned parameters of a predictive coding network:
 $$
     \begin{align}
-    \frac{\delta F}{\delta v_p} &= \frac{\Phi - v_p}{{\Sigma_p}} = \epsilon_p \\
-    \frac{\delta F}{\delta \Sigma_p} &= \frac{1}{2} \left[ \frac{(\Phi - v_p)^2}{{\Sigma_p^2}} - \frac{1}{{\Sigma_p}} \right]  = \frac{1}{2} \left(\epsilon_p^2 - {\Sigma_p^{-1}} \right) \\
-    \frac{\delta F}{\delta \Sigma_u} &=  \frac{1}{2} \left[ \frac{(u - g(\Phi))^2}{{\Sigma_u^2}} - \frac{1}{{\Sigma_u}} \right] = \frac{1}{2} \left(\epsilon_u^2 - {\Sigma_u^{-1}} \right)
+    \frac{\delta F}{\delta v_p} & = \frac{\Phi - v_p}{{\Sigma_p}} = \epsilon_p \\\\
+    \frac{\delta F}{\delta \Sigma_p} & = \frac{1}{2} \left[ \frac{(\Phi - v_p)^2}{{\Sigma_p^2}} - \frac{1}{{\Sigma_p}} \right]  = \frac{1}{2} \left(\epsilon_p^2 - {\Sigma_p^{-1}} \right) \\\\
+    \frac{\delta F}{\delta \Sigma_u} & =  \frac{1}{2} \left[ \frac{(u - g(\Phi))^2}{{\Sigma_u^2}} - \frac{1}{{\Sigma_u}} \right] = \frac{1}{2} \left(\epsilon_u^2 - {\Sigma_u^{-1}} \right)
     \end{align}
 $$
 

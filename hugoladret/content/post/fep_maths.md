@@ -236,7 +236,7 @@ $$
 The same can be done for $\Sigma_p$:
 $$
 \begin{align}
-\frac{\delta F }{\delta \Sigma_p} & = 
+\frac{\delta F }{\delta \Sigma_p} & =
 \frac{1}{2} \left(
 \frac{\delta}{\delta \Sigma_p} \left( - \frac{(\Phi - v_p)^2}{\Sigma_p} \right) +
 \frac{\delta}{\delta \Sigma_p} \left( - \frac{(u - g(\Phi))^2}{\Sigma_u} \right) +
@@ -244,31 +244,33 @@ $$
 \frac{\delta}{\delta \Sigma_p} \left( - \ln \Sigma_p  \right)  
 \right) +
 \frac{\delta}{\delta \Sigma_p} C \\\\
-& = 
+& =
 \frac{1}{2} \left(
 - \frac{\delta}{\delta \Sigma_p} \ln \Sigma_p +
 \left( - (\Phi - v_p)^2
 \frac{\delta}{\delta \Sigma_p} \frac{1}{\Sigma_p} \right) 
 \right) \\\\
-& = 
+& =
 \frac{1}{2} \left(
 - \frac{1}{\Sigma_p} +
 \left(  (\Phi - v_p)^2
 \frac{\frac{\delta}{\delta \Sigma_p} \Sigma_p}{\Sigma_p^2} \right) 
 \right) \\\\
-& = 
+& =
 \frac{1}{2} \left(
 (\Phi - v_p)^2
 \frac{\frac{\delta}{\delta \Sigma_p} \Sigma_p}{\Sigma_p^2} 
 - \frac{1}{\Sigma_p}
 \right) \\\\
-& = 
+& =
 \frac{1}{2} \left(
 \frac{(\Phi - v_p)^2}{\Sigma_p^2} 
 - \frac{1}{\Sigma_p}
 \right)
 \end{align}
 $$
+
+
 
 Likewise, for $\Sigma_u$:
 $$

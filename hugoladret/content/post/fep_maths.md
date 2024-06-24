@@ -1,7 +1,7 @@
 +++
 author = "Hugo Ladret"
 title = "[model] Some maths behind PC under FEP"
-date = "2024-06-09"
+date = "2024-06-24"
 description = """ 
 """
 tags = [
@@ -44,13 +44,13 @@ We get:
 $$
 \begin{equation}
   \begin{aligned}
-    F & = \ln p(\Phi) + \ln p(u|\Phi) \\ 
-      & =\ln \left( \frac{1}{\sqrt{2\pi\Sigma_p}} \exp{-\frac{(\Phi-v_p)^2}{2\Sigma_p}}\right) + \ln \left( \frac{1}{\sqrt{2\pi\Sigma_u}} \exp{-\frac{(u-g(\Phi))^2}{2\Sigma_u}} \right) \\
-      & = \ln \left( \frac{1}{\sqrt{2\pi\Sigma_p}} \right) + \ln \left(\exp{-\frac{(\Phi-v_p)^2}{2\Sigma_p}} \right) + 
+    F &= \ln p(\Phi) + \ln p(u|\Phi) \\ 
+      &=\ln \left( \frac{1}{\sqrt{2\pi\Sigma_p}} \exp{-\frac{(\Phi-v_p)^2}{2\Sigma_p}}\right) + \ln \left( \frac{1}{\sqrt{2\pi\Sigma_u}} \exp{-\frac{(u-g(\Phi))^2}{2\Sigma_u}} \right) \\
+      &= \ln \left( \frac{1}{\sqrt{2\pi\Sigma_p}} \right) + \ln \left(\exp{-\frac{(\Phi-v_p)^2}{2\Sigma_p}} \right) + 
             \ln \left( \frac{1}{\sqrt{2\pi\Sigma_u}} \right) + \ln \left(\exp{-\frac{(u-g(\Phi))^2}{2\Sigma_u}} \right) \\
-      & = \ln \left( \frac{1}{\sqrt{2\pi}} \right) - \frac{1}{2} \ln \Sigma_p- \frac{(\Phi-v_p)^2}{2\Sigma_p} + 
+      &= \ln \left( \frac{1}{\sqrt{2\pi}} \right) - \frac{1}{2} \ln \Sigma_p- \frac{(\Phi-v_p)^2}{2\Sigma_p} + 
             \ln \left( \frac{1}{\sqrt{2\pi}} \right) - \frac{1}{2} \ln \Sigma_u -  \frac{(u-g(\Phi))^2}{2\Sigma_u} \\ 
-      & =  \frac{1}{2} \left( - \ln \Sigma_p - \frac{(\Phi - v_p)^2}{\Sigma_p}  - \ln \Sigma_u - \frac{(u - g(\Phi))^2}{\Sigma_u}\right) + C
+      &=  \frac{1}{2} \left( - \ln \Sigma_p - \frac{(\Phi - v_p)^2}{\Sigma_p}  - \ln \Sigma_u - \frac{(u - g(\Phi))^2}{\Sigma_u}\right) + C
   \end{aligned}
 \end{equation}
 $$
@@ -361,4 +361,4 @@ $$
 
 # Matrix form
 Straightforward from the vector (current) form. Bogacz even formulates the addition of an inhibitory neuron to make everything biological more plausible.  
-Also fits the idea from (this paper)[https://hugoladret.github.io/publications/ladret_et_al_variance_v1/] that inhibition shapes uncertainty weighting.
+Also fits the idea from [this paper](https://hugoladret.github.io/publications/ladret_et_al_variance_v1/) that inhibition shapes uncertainty weighting.

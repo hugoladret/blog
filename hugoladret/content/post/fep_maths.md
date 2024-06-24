@@ -211,8 +211,7 @@ $$
 \frac{\delta}{\delta v_p} \left( - \frac{(\Phi - v_p)^2}{\Sigma_p} \right) +
 \frac{\delta}{\delta v_p} \left( - \frac{(u - g(\Phi))^2}{\Sigma_u} \right) +
 \frac{\delta}{\delta v_p} \left( - \ln \Sigma_u  \right) + 
-\frac{\delta}{\delta v_p} \left( - \ln \Sigma_p  \right) + 
-\right)
+\frac{\delta}{\delta v_p} \left( - \ln \Sigma_p  \right)  \right)+ 
 \frac{\delta}{\delta v_p} C \\\\
  & = \frac{1}{2} \left(
 \frac{\delta}{\delta v_p} \left( - \frac{(\Phi - v_p)^2}{\Sigma_p} \right) 

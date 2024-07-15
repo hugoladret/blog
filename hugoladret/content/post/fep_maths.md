@@ -193,7 +193,7 @@ $\ln p(u)$ directly relates to the information "surprise" of the estimate $p(u)$
 Since KL divergence is strictly positive, $F$ is a lower bound of the surprise $\ln p(u)$.  
 Then, maximizing $F$ minimizes surprise or uncertainty of $\ln p(u)$ improving the approximation of the surrogate $q(v)$.
 
-This allows to update the uncertainty parameters - we can now rewrite:
+This allows to update the uncertainty parameters - we now rewrite:
 $$
 \begin{align}
     \ln p(u) & = F+ KL (q(v), p(v|u)) \\\\
@@ -201,9 +201,9 @@ $$
 \end{align}
 $$
 
-as the KL divergence is a strictly positive term that forms a lower bound on surprise, it can be included in the constant term $C$ for simplicity's sake.
+KL divergence is a strictly positive term that forms a lower bound on surprise - it can be included in the constant term $C$ for simplicity's sake.
 
-Starting from this definition, we can now derive $F$ to optimize $v_p$:
+Starting from this definition, we now derive $F$ to optimize $v_p$:
 $$
 \begin{align}
 \frac{\delta F}{\delta v_p} & =
@@ -233,42 +233,42 @@ $$
 \end{align}
 $$
 
-The same can be done for $\Sigma_p$:
-$$
-\begin{align}
-\frac{\delta F }{\delta \Sigma_p} & =
+The same for $\Sigma_p$:
+\begin{equation}
+\begin{aligned}
+\frac{\delta F }{\delta \Sigma_p} &= 
 \frac{1}{2} \left(
 \frac{\delta}{\delta \Sigma_p} \left( - \frac{(\Phi - v_p)^2}{\Sigma_p} \right) +
 \frac{\delta}{\delta \Sigma_p} \left( - \frac{(u - g(\Phi))^2}{\Sigma_u} \right) +
 \frac{\delta}{\delta \Sigma_p} \left( - \ln \Sigma_u  \right) + 
 \frac{\delta}{\delta \Sigma_p} \left( - \ln \Sigma_p  \right)  
 \right) +
-\frac{\delta}{\delta \Sigma_p} C \\\\
-& =
+\frac{\delta}{\delta \Sigma_p} C \\
+&= 
 \frac{1}{2} \left(
 - \frac{\delta}{\delta \Sigma_p} \ln \Sigma_p +
 \left( - (\Phi - v_p)^2
 \frac{\delta}{\delta \Sigma_p} \frac{1}{\Sigma_p} \right) 
-\right) \\\\
-& =
+\right) \\
+&= 
 \frac{1}{2} \left(
 - \frac{1}{\Sigma_p} +
 \left(  (\Phi - v_p)^2
-\frac{\frac{\delta}{\delta \Sigma_p} \Sigma_p}{\Sigma_p^2} \right) 
-\right) \\\\
-& =
+\frac{\delta \Sigma_p}{\Sigma_p^2} \right) 
+\right) \\
+&= 
 \frac{1}{2} \left(
 (\Phi - v_p)^2
-\frac{\frac{\delta}{\delta \Sigma_p} \Sigma_p}{\Sigma_p^2} 
+\frac{\delta \Sigma_p}{\Sigma_p^2}
 - \frac{1}{\Sigma_p}
-\right) \\\\
-& =
+\right) \\
+&= 
 \frac{1}{2} \left(
 \frac{(\Phi - v_p)^2}{\Sigma_p^2} 
 - \frac{1}{\Sigma_p}
 \right)
-\end{align}
-$$
+\end{aligned}
+\end{equation}
 
 
 
@@ -306,7 +306,7 @@ $$
 \end{align}
 $$
 
-Yielding the learned parameters of a predictive coding network:
+Yielding the learned parameters of a predictive coding network in scalar form:
 $$
     \begin{align}
     \frac{\delta F}{\delta v_p} & = \frac{\Phi - v_p}{{\Sigma_p}} = \epsilon_p \\\\
@@ -316,5 +316,5 @@ $$
 $$
 
 # Matrix form
-Straightforward from the vector (current) form. Bogacz even formulates the addition of an inhibitory neuron to make everything biological more plausible.  
+Straightforward from the scalar form. Bogacz even formulates the addition of an inhibitory neuron to make everything biological more plausible.  
 Also fits the idea from [this paper](https://hugoladret.github.io/publications/ladret_et_al_variance_v1/) that inhibition shapes uncertainty weighting.

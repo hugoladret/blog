@@ -234,8 +234,8 @@ $$
 $$
 
 The same for $\Sigma_p$:
-\begin{equation}
-\begin{aligned}
+$$
+\begin{align}
 \frac{\delta F }{\delta \Sigma_p} &= 
 \frac{1}{2} \left(
 \frac{\delta}{\delta \Sigma_p} \left( - \frac{(\Phi - v_p)^2}{\Sigma_p} \right) +
@@ -267,9 +267,8 @@ The same for $\Sigma_p$:
 \frac{(\Phi - v_p)^2}{\Sigma_p^2} 
 - \frac{1}{\Sigma_p}
 \right)
-\end{aligned}
-\end{equation}
-
+\end{align}
+$$
 
 
 Likewise, for $\Sigma_u$:

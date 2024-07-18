@@ -20,7 +20,7 @@ On any arbitrary dimension (light intensity, sound frequency, size of a dog), on
 In the first case, the prediction is larger than the reality - so a negative prediction error should "decrease" the magnitude of new predictions to be more accurate about the world.   
 In the second case, the prediction is smaller than the reality - so a positive prediction error should "increase" the magnitude of new predictions to be more accurate about the world.  
 
-Both positive and negative response type to mismatch exist in the cortex and can be assigned to molecular signatures ([O'toole 2023](https://pubmed.ncbi.nlm.nih.gov/37708892/)). 
+Both positive and negative response type to mismatch exist in the cortex and can be assigned to molecular signatures ([O'Toole 2023](https://pubmed.ncbi.nlm.nih.gov/37708892/)). 
 
 Yet, neural activity is expensive, so why have double the amount of neurons if the goal is to reduce the cost of neural activity ?
 

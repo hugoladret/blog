@@ -1,7 +1,7 @@
 +++
 author = "Hugo Ladret"
-title = "[model] Information loads of two prediction error streams"
-date = "2024-06-24"
+title = "[model] Information cost of two prediction error streams"
+date = "2024-07-18"
 description = """ 
 """
 tags = [
@@ -103,4 +103,4 @@ $$
 Hence a single neural pathway with + and - deviation is already efficient. So either the two type of response are there because they are both non-zero baseline and can each deviate in two directions (over-over shooting and over-under shooting for instance).
 Or, it is simply better for control's sake and/or downstream readibility to have two separate pathways.
 
-In conclusion - no clear conclusion.
+In conclusion - no clear conclusion (:.

@@ -20,7 +20,7 @@ On any arbitrary dimension (light intensity, sound frequency, size of a dog), on
 In the first case, the prediction is larger than the reality - so a negative prediction error should "decrease" the magnitude of new predictions to be more accurate about the world.   
 In the second case, the prediction is smaller than the reality - so a positive prediction error should "increase" the magnitude of new predictions to be more accurate about the world.  
 
-Both positive and negative response type to mismatch exist in the cortex and can be assigned to molecular signatures ( [O'toole 2023](https://pubmed.ncbi.nlm.nih.gov/37708892/) ). 
+Both positive and negative response type to mismatch exist in the cortex and can be assigned to molecular signatures ([O'toole 2023](https://pubmed.ncbi.nlm.nih.gov/37708892/)). 
 
 Yet, neural activity is expensive, so why have double the amount of neurons if the goal is to reduce the cost of neural activity ?
 
@@ -34,24 +34,20 @@ I = \log_2(1+|\Delta_R| / \sigma_R)
 $$
 
 Suppose a semi-arbitrary baseline $R$ of approx. $5 spike/s$ in mouse V1. Then two deviations possible
-\begin{itemize}
-    \item Positive prediction error: $\Delta R_+ = +2$ spikes/s
-    \item Negative prediction error: $\Delta R_- = -2$ spikes/s
-    \item Time window: $t = 1$ s
-    \item Standard deviation of rate changes (again we assume Gaussian): $\sigma = 1$ spike/s
-\end{itemize}
+Positive prediction error: $\Delta R_+ = +2$ spikes/s
+Negative prediction error: $\Delta R_- = -2$ spikes/s
 
 Bits per spike are defined as:
 $$
 E(\Delta R, R, \sigma, t) = \frac{\log_2(1 + |\Delta R|/\sigma)}{(R + \Delta R)t}
 $$
 
-For $\Delta R_+ = +2$:
+For $\Delta R_+ = +2$, within a time window of $1s$ and an std of $1 spike/s$:
 $$
 \begin{align}
-E_+ &= \frac{\log_2(1 + |\Delta R_+|/\sigma)}{(R + \Delta R_+)t} \\[2ex]
-    &= \frac{\log_2(1 + 2/1)}{(5 + 2) \cdot 1} \\[2ex]
-    &= \frac{\log_2(3)}{7} \\[2ex]
+E_+ &= \frac{\log_2(1 + |\Delta R_+|/\sigma)}{(R + \Delta R_+)t} 
+    &= \frac{\log_2(1 + 2/1)}{(5 + 2) \cdot 1}
+    &= \frac{\log_2(3)}{7}
     &\approx 0.229 \text{ bits/spike}
 \end{align}
 $$
@@ -59,9 +55,9 @@ $$
 For $\Delta R_- = -2$:
 $$
 \begin{align}
-E_- &= \frac{\log_2(1 + |\Delta R_-|/\sigma)}{(R + \Delta R_-)t} \\[2ex]
-    &= \frac{\log_2(1 + 2/1)}{(5 - 2) \cdot 1} \\[2ex]
-    &= \frac{\log_2(3)}{3} \\[2ex]
+E_- &= \frac{\log_2(1 + |\Delta R_-|/\sigma)}{(R + \Delta R_-)t}
+    &= \frac{\log_2(1 + 2/1)}{(5 - 2) \cdot 1
+    &= \frac{\log_2(3)}{3}
     &\approx 0.528 \text{ bits/spike}
 \end{align}
 $$
@@ -71,12 +67,13 @@ This scales - meaning that negative deviations are always more efficient. This w
 # Zero-baseline concepts 
 
 For a hypothetical two-neuron type system with near zero baselines:
-
-\begin{align*}
-E &= \frac{\log_2(1 + 2/1)}{2 \cdot 1} \\[2ex]
-  &= \frac{\log_2(3)}{2} \\[2ex]
+$$
+\begin{align}
+E &= \frac{\log_2(1 + 2/1)}{2 \cdot 1}
+  &= \frac{\log_2(3)}{2}
   &\approx 0.792 \text{ bits/spike}
-\end{align*}
+\end{align}
+$$
 
 Four times better than positive prediction error, and better than negative prediction error too. Two times better than average efficiency of $\approx 0.379 \text{ bits/spike}$.
 Also more costly - need to have two populations of neurons. This also means two separate prediction errors pathways that can be individually controlled - might improve information.
